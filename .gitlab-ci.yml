@@ -25,4 +25,4 @@ build:
     - git diff --exit-code data/services.js || (echo "❌ data/services.js is stale — run 'npm run build'"; exit 1)
     - echo "✅ data/services.js matches data/services.yaml"
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "main"
