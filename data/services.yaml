@@ -8,7 +8,9 @@ categories:
   - name: Monitoring & Observability
     items:
     - name: Prometheus
-      description: Industry-standard cloud-native metrics collection and alerting. Pull-based time-series database with PromQL query language and built-in service discovery for monitoring all openDesk services in real time.
+      description: Industry-standard cloud-native metrics collection and alerting.
+        Pull-based time-series database with PromQL query language and built-in service
+        discovery for monitoring all openDesk services in real time.
       url: https://prometheus.io
       docs_url: https://prometheus.io/docs/introduction/overview/
       stars: 56k
@@ -29,7 +31,10 @@ categories:
       - research
       language: Go
     - name: Grafana
-      description: Multi-source observability dashboards connecting to Prometheus, Loki, Elasticsearch and 100+ data sources. Enables centralized monitoring dashboards for institutional IT infrastructure with role-based access control for multi-tenant deployments.
+      description: Multi-source observability dashboards connecting to Prometheus,
+        Loki, Elasticsearch and 100+ data sources. Enables centralized monitoring
+        dashboards for institutional IT infrastructure with role-based access control
+        for multi-tenant deployments.
       url: https://grafana.com
       docs_url: https://grafana.com/docs/grafana/latest/
       stars: 66k
@@ -50,7 +55,9 @@ categories:
       organization: Grafana Labs
       language: Go, TypeScript
     - name: Loki
-      description: Cost-effective log aggregation system with Prometheus-style labels and Grafana-native integration. Centralizes logs from all openDesk services for auditing, debugging, and compliance tracking across educational IT environments.
+      description: Cost-effective log aggregation system with Prometheus-style labels
+        and Grafana-native integration. Centralizes logs from all openDesk services
+        for auditing, debugging, and compliance tracking across educational IT environments.
       url: https://grafana.com/oss/loki
       docs_url: https://grafana.com/docs/loki/latest/
       stars: 25k
@@ -72,7 +79,9 @@ categories:
       organization: Grafana Labs
       language: Go
     - name: Prometheus Alertmanager
-      description: Alert routing, deduplication, and notification manager for Prometheus alerts. Routes notifications to email, Matrix/Element chat, or Slack with configurable group policies for 24/7 IT operations.
+      description: Alert routing, deduplication, and notification manager for Prometheus
+        alerts. Routes notifications to email, Matrix/Element chat, or Slack with
+        configurable group policies for 24/7 IT operations.
       url: https://prometheus.io/docs/alerting/latest/alertmanager
       docs_url: https://prometheus.io/docs/alerting/latest/alertmanager/
       stars: 6.7k
@@ -93,7 +102,9 @@ categories:
       organization: Cloud Native Computing Foundation (CNCF)
       language: Go
     - name: Kibana
-      description: Data visualization and exploration frontend for Elasticsearch with powerful dashboards and ad-hoc query capabilities. Enables custom log analysis dashboards for institutional security auditing and usage analytics.
+      description: Data visualization and exploration frontend for Elasticsearch with
+        powerful dashboards and ad-hoc query capabilities. Enables custom log analysis
+        dashboards for institutional security auditing and usage analytics.
       url: https://www.elastic.co/kibana
       docs_url: https://www.elastic.co/guide/en/kibana/current/index.html
       repository: https://github.com/elastic/kibana
@@ -117,7 +128,9 @@ categories:
   - name: Container & Infrastructure
     items:
     - name: Traefik
-      description: Cloud-native edge router and load balancer with automatic TLS certificate management and Docker service discovery. Provides a unified secure entry point for all openDesk web services with zero-downtime deployments.
+      description: Cloud-native edge router and load balancer with automatic TLS certificate
+        management and Docker service discovery. Provides a unified secure entry point
+        for all openDesk web services with zero-downtime deployments.
       url: https://traefik.io
       docs_url: https://doc.traefik.io/traefik/
       stars: 52k
@@ -141,7 +154,9 @@ categories:
       - research
       language: Go
     - name: Docker
-      description: Container runtime and packaging format for reproducible application deployment. Enables consistent deployment of openDesk services across development, staging, and production environments in educational institutions.
+      description: Container runtime and packaging format for reproducible application
+        deployment. Enables consistent deployment of openDesk services across development,
+        staging, and production environments in educational institutions.
       url: https://docker.com
       docs_url: https://docs.docker.com/
       stars: 30k
@@ -163,7 +178,9 @@ categories:
       organization: Docker Inc.
       language: Go
     - name: Portainer
-      description: Container management platform with intuitive UI for Docker and Kubernetes environments. Simplifies container operations for IT staff managing complex multi-service openDesk deployments.
+      description: Container management platform with intuitive UI for Docker and
+        Kubernetes environments. Simplifies container operations for IT staff managing
+        complex multi-service openDesk deployments.
       url: https://www.portainer.io
       docs_url: https://docs.portainer.io/
       repository: https://github.com/portainer/portainer
@@ -187,7 +204,9 @@ categories:
   - name: Container Registry
     items:
     - name: Harbor
-      description: Cloud-native container registry with vulnerability scanning, RBAC, and image replication. Ensures all container images used in openDesk deployments are scanned and trusted before production use.
+      description: Cloud-native container registry with vulnerability scanning, RBAC,
+        and image replication. Ensures all container images used in openDesk deployments
+        are scanned and trusted before production use.
       url: https://goharbor.io
       docs_url: https://goharbor.io/docs/
       stars: 24k
@@ -211,7 +230,9 @@ categories:
   - name: Backup & Recovery
     items:
     - name: Restic (k8up)
-      description: Automated Kubernetes backup operator using Restic for encrypted, deduplicated backups. Provides reliable disaster recovery for openDesk data with scheduling, retention policies, and cloud storage integration.
+      description: Automated Kubernetes backup operator using Restic for encrypted,
+        deduplicated backups. Provides reliable disaster recovery for openDesk data
+        with scheduling, retention policies, and cloud storage integration.
       url: https://k8up.io
       docs_url: https://k8up.io/docs/
       stars: '700'
@@ -239,7 +260,9 @@ categories:
   - name: Password Management
     items:
     - name: Vaultwarden
-      description: Lightweight, self-hosted Bitwarden-compatible password manager with 2FA and emergency access. Enables secure credential sharing for IT teams and password policies for students and staff across all services.
+      description: Lightweight, self-hosted Bitwarden-compatible password manager
+        with 2FA and emergency access. Enables secure credential sharing for IT teams
+        and password policies for students and staff across all services.
       url: https://github.com/dani-garcia/vaultwarden
       docs_url: https://github.com/dani-garcia/vaultwarden/wiki
       stars: 39k
@@ -263,7 +286,9 @@ categories:
   - name: Antivirus
     items:
     - name: ClamAV
-      description: Open-source antivirus engine for high-performance file and email scanning. Protects educational institutions against malware in email attachments, uploaded documents, and shared files within Nextcloud.
+      description: Open-source antivirus engine for high-performance file and email
+        scanning. Protects educational institutions against malware in email attachments,
+        uploaded documents, and shared files within Nextcloud.
       url: https://www.clamav.net
       docs_url: https://docs.clamav.net/
       repository: https://github.com/Cisco-Talos/clamav
@@ -293,7 +318,9 @@ categories:
   - name: Analytics
     items:
     - name: Matomo
-      description: GDPR-compliant web analytics platform — the ethical alternative to Google Analytics. Provides web analytics for institutional websites and learning platforms without sharing data with third-party advertising companies.
+      description: GDPR-compliant web analytics platform — the ethical alternative
+        to Google Analytics. Provides web analytics for institutional websites and
+        learning platforms without sharing data with third-party advertising companies.
       url: https://matomo.org
       docs_url: https://matomo.org/guide/
       stars: 20k
@@ -315,7 +342,9 @@ categories:
   - name: Search
     items:
     - name: Meilisearch
-      description: Lightning-fast, typo-tolerant search engine with instant results and simple API. Powers unified cross-platform search across Nextcloud files, documentation, and institutional knowledge bases.
+      description: Lightning-fast, typo-tolerant search engine with instant results
+        and simple API. Powers unified cross-platform search across Nextcloud files,
+        documentation, and institutional knowledge bases.
       url: https://www.meilisearch.com
       docs_url: https://www.meilisearch.com/docs
       stars: 48k
@@ -335,7 +364,9 @@ categories:
       organization: Meilisearch
       language: Rust
     - name: Elasticsearch
-      description: Distributed search and analytics engine for log analytics and full-text search. Powers institution-wide search across logs, documents, and learning content with advanced filtering and aggregation.
+      description: Distributed search and analytics engine for log analytics and full-text
+        search. Powers institution-wide search across logs, documents, and learning
+        content with advanced filtering and aggregation.
       url: https://www.elastic.co/elasticsearch
       docs_url: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
       repository: https://github.com/elastic/elasticsearch
@@ -365,7 +396,9 @@ categories:
   - name: Video Streaming
     items:
     - name: Jellyfin
-      description: Free Software media system for managing and streaming educational video content. Enables self-hosted lecture recording management and media library access for students and staff without vendor lock-in.
+      description: Free Software media system for managing and streaming educational
+        video content. Enables self-hosted lecture recording management and media
+        library access for students and staff without vendor lock-in.
       url: https://jellyfin.org
       docs_url: https://jellyfin.org/docs/general/quick-start/
       stars: 36k
@@ -393,7 +426,9 @@ categories:
   - name: Single Sign-On
     items:
     - name: Keycloak
-      description: Open-source Identity and Access Management with SAML 2.0 and OpenID Connect support. Provides centralized SSO for all openDesk services with LDAP federation, user provisioning, and multi-tenant support.
+      description: Open-source Identity and Access Management with SAML 2.0 and OpenID
+        Connect support. Provides centralized SSO for all openDesk services with LDAP
+        federation, user provisioning, and multi-tenant support.
       url: https://www.keycloak.org
       docs_url: https://www.keycloak.org/documentation
       stars: 24k
@@ -416,7 +451,9 @@ categories:
       organization: Cloud Native Computing Foundation (CNCF)
       language: Java
     - name: Nubus
-      description: Enterprise identity and access management with OpenLDAP, Keycloak, Portal, and UMC integration. Provides complete IAM infrastructure including user provisioning, group policies, and device management for educational institutions.
+      description: Enterprise identity and access management with OpenLDAP, Keycloak,
+        Portal, and UMC integration. Provides complete IAM infrastructure including
+        user provisioning, group policies, and device management for educational institutions.
       url: https://www.univention.com
       docs_url: https://docs.nubus.software/
       stars: '50'
@@ -439,7 +476,9 @@ categories:
   - name: User Management
     items:
     - name: Self-Service Password
-      description: Self-service password reset tool for OpenLDAP-backed directories. Reduces IT helpdesk load by letting students and staff reset their own passwords securely with email verification.
+      description: Self-service password reset tool for OpenLDAP-backed directories.
+        Reduces IT helpdesk load by letting students and staff reset their own passwords
+        securely with email verification.
       url: https://ltb-project.org
       docs_url: https://ltb-project.org/documentation/self-service-password/
       stars: 1.2k
@@ -459,7 +498,9 @@ categories:
       organization: LTB Project
       language: PHP
     - name: OpenLDAP
-      description: Open-source LDAP directory server for centralized user and group management in educational institutions. Stores all user accounts, group memberships, and organizational units used by Keycloak, Nextcloud, and mail systems.
+      description: Open-source LDAP directory server for centralized user and group
+        management in educational institutions. Stores all user accounts, group memberships,
+        and organizational units used by Keycloak, Nextcloud, and mail systems.
       url: https://www.openldap.org
       docs_url: https://www.openldap.org/doc/
       stars: '0'
@@ -487,19 +528,10 @@ categories:
   subcategories:
   - name: LMS Platforms
     items:
-    - name: "ILIAS"
-      description: "Modular learning management system for resource management, testing, and interactive learning experiences."
-      url: https://ilias.example.org
-      maturity: "stable"
-      tier: "critical"
-      logo: "ilias.svg"
-      tags:
-      - "ilias"
-      - "lms"
-      - "learning-management"
-      - "education"
     - name: ILIAS
-      description: Comprehensive LMS widely used in German-speaking universities with Shibboleth SSO integration. Provides course management, SCORM-compliant content delivery, group work spaces, and exam functionality for higher education.
+      description: Comprehensive LMS widely used in German-speaking universities with
+        Shibboleth SSO integration. Provides course management, SCORM-compliant content
+        delivery, group work spaces, and exam functionality for higher education.
       url: https://www.ilias.de
       docs_url: https://www.ilias.de/docu/
       stars: '0'
@@ -522,7 +554,9 @@ categories:
       organization: ILIAS Open Source e-Learning e.V.
       language: PHP
     - name: Moodle
-      description: World's most widely used LMS with extensive plugin ecosystem and community support. Enables blended learning with course design tools, gradebook, workshop activities, and integration with 3rd-party educational tools.
+      description: World's most widely used LMS with extensive plugin ecosystem and
+        community support. Enables blended learning with course design tools, gradebook,
+        workshop activities, and integration with 3rd-party educational tools.
       url: https://moodle.org
       docs_url: https://docs.moodle.org/
       stars: 5.8k
@@ -546,7 +580,9 @@ categories:
   - name: Video Conferencing
     items:
     - name: BigBlueButton
-      description: Web conferencing system purpose-built for online teaching with interactive whiteboard, breakout rooms, and session recording. Supports virtual classrooms, office hours, and asynchronous lecture delivery with LMS integration.
+      description: Web conferencing system purpose-built for online teaching with
+        interactive whiteboard, breakout rooms, and session recording. Supports virtual
+        classrooms, office hours, and asynchronous lecture delivery with LMS integration.
       url: https://bigbluebutton.org
       docs_url: https://docs.bigbluebutton.org/
       stars: 8.5k
@@ -568,7 +604,9 @@ categories:
       organization: BigBlueButton Inc.
       language: Java, JavaScript
     - name: Jitsi Meet
-      description: WebRTC-based video conferencing with lightweight deployment and federation support. Enables ad-hoc video meetings and virtual consultations for students and staff without requiring a dedicated conferencing infrastructure.
+      description: WebRTC-based video conferencing with lightweight deployment and
+        federation support. Enables ad-hoc video meetings and virtual consultations
+        for students and staff without requiring a dedicated conferencing infrastructure.
       url: https://jitsi.org
       docs_url: https://jitsi.github.io/handbook/docs/intro/
       stars: 23k
@@ -590,7 +628,9 @@ categories:
   - name: Knowledge Management
     items:
     - name: XWiki
-      description: Enterprise wiki platform for collaborative knowledge bases with OpenID Connect and LDAP integration. Supports curriculum documentation, project wikis, institutional knowledge bases, and student group collaboration spaces.
+      description: Enterprise wiki platform for collaborative knowledge bases with
+        OpenID Connect and LDAP integration. Supports curriculum documentation, project
+        wikis, institutional knowledge bases, and student group collaboration spaces.
       url: https://www.xwiki.org
       docs_url: https://www.xwiki.org/xwiki/bin/view/Documentation/
       stars: 2.1k
@@ -618,19 +658,10 @@ categories:
   subcategories:
   - name: File Storage & Sharing
     items:
-    - name: "Nextcloud"
-      description: "Full-featured cloud storage and collaboration suite with file sync, sharing, and office integration."
-      url: https://nextcloud.example.org
-      maturity: "stable"
-      tier: "critical"
-      logo: "nextcloud.svg"
-      tags:
-      - "nextcloud"
-      - "files"
-      - "cloud-storage"
-      - "collaboration"
     - name: Nextcloud
-      description: Self-hosted file storage and collaboration platform replacing Google Drive and Dropbox. Provides secure file sharing, collaborative document editing, calendar, and talk integration for students, staff, and research groups.
+      description: Self-hosted file storage and collaboration platform replacing Google
+        Drive and Dropbox. Provides secure file sharing, collaborative document editing,
+        calendar, and talk integration for students, staff, and research groups.
       url: https://nextcloud.com
       docs_url: https://docs.nextcloud.com/
       stars: 28k
@@ -651,7 +682,9 @@ categories:
       organization: Nextcloud GmbH
       language: PHP
     - name: OpenCloud
-      description: Lightweight CS3-native file sharing solution optimized for educational workloads. Provides fast, resource-efficient file sync and sharing within the openDesk ecosystem without the overhead of full Nextcloud.
+      description: Lightweight CS3-native file sharing solution optimized for educational
+        workloads. Provides fast, resource-efficient file sync and sharing within
+        the openDesk ecosystem without the overhead of full Nextcloud.
       url: https://opencloud.eu
       docs_url: https://opencloud.eu/docs
       stars: '500'
@@ -671,29 +704,10 @@ categories:
       language: Go
   - name: Document Editing
     items:
-    - name: "Memorandums - Digital Notebook"
-      description: "Lightweight digital notebook and simple integration connector module for note-taking."
-      url: https://memorandums---digital-notebook.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "notes.svg"
-      tags:
-      - "notes"
-      - "memorandum"
-      - "write"
-    - name: "Collabora"
-      description: "LibreOffice-based online office suite for collaborative editing of documents, spreadsheets, and presentations."
-      url: https://collabora.example.org
-      maturity: "stable"
-      tier: "critical"
-      logo: "collabora.svg"
-      tags:
-      - "collabora"
-      - "office"
-      - "libreoffice"
-      - "document-editing"
     - name: Collabora Online
-      description: Real-time collaborative document editing integrated with Nextcloud via WOPI protocol. Enables browser-based co-editing of ODF/Office documents in courses, committee work, and administrative processes.
+      description: Real-time collaborative document editing integrated with Nextcloud
+        via WOPI protocol. Enables browser-based co-editing of ODF/Office documents
+        in courses, committee work, and administrative processes.
       url: https://www.collaboraoffice.com
       docs_url: https://www.collaboraoffice.com/collabora-online-documentation/
       stars: 10k
@@ -713,7 +727,9 @@ categories:
       organization: Collabora Productivity
       language: C++
     - name: Etherpad
-      description: Real-time collaborative text editor with operational transformation for group writing. Supports live collaborative note-taking, workshop documentation, and student group work with version history and attribution tracking.
+      description: Real-time collaborative text editor with operational transformation
+        for group writing. Supports live collaborative note-taking, workshop documentation,
+        and student group work with version history and attribution tracking.
       url: https://etherpad.org
       docs_url: https://etherpad.org/doc/latest/
       stars: 16k
@@ -732,7 +748,9 @@ categories:
       organization: Etherpad Foundation
       language: JavaScript
     - name: CryptPad
-      description: End-to-end encrypted collaborative editing platform integrated with Nextcloud. Enables exam-secure document creation and confidential committee work where even the hosting infrastructure cannot access content.
+      description: End-to-end encrypted collaborative editing platform integrated
+        with Nextcloud. Enables exam-secure document creation and confidential committee
+        work where even the hosting infrastructure cannot access content.
       url: https://cryptpad.fr
       docs_url: https://docs.cryptpad.org/
       stars: 5.5k
@@ -752,7 +770,9 @@ categories:
       organization: XWiki SAS
       language: JavaScript
     - name: HedgeDoc
-      description: Real-time collaborative markdown editor for lecture notes, meeting minutes, and technical documentation. Provides version-controlled, linkable knowledge documents that integrate well with developer and academic workflows.
+      description: Real-time collaborative markdown editor for lecture notes, meeting
+        minutes, and technical documentation. Provides version-controlled, linkable
+        knowledge documents that integrate well with developer and academic workflows.
       url: https://hedgedoc.org
       docs_url: https://docs.hedgedoc.org/
       repository: https://github.com/hedgedoc/hedgedoc
@@ -775,7 +795,9 @@ categories:
       - group-work
       - research
     - name: Notes (im.press)
-      description: Collaborative note-taking application with AI integration and real-time sync via Yjs. Supports structured academic note-taking, lecture summaries, and study group collaboration for educational use cases.
+      description: Collaborative note-taking application with AI integration and real-time
+        sync via Yjs. Supports structured academic note-taking, lecture summaries,
+        and study group collaboration for educational use cases.
       url: https://www.im.press
       docs_url: https://github.com/nicedoc/notes.im.press
       stars: '100'
@@ -798,7 +820,9 @@ categories:
   - name: Diagramming & Whiteboards
     items:
     - name: Draw.io
-      description: Stateless diagram editor for flowcharts, UML, and network diagrams. Supports collaborative technical documentation, system architecture diagrams, and process visualization for computer science courses and IT documentation.
+      description: Stateless diagram editor for flowcharts, UML, and network diagrams.
+        Supports collaborative technical documentation, system architecture diagrams,
+        and process visualization for computer science courses and IT documentation.
       url: https://www.drawio.com
       docs_url: https://www.drawio.com/doc/
       stars: 42k
@@ -817,7 +841,9 @@ categories:
       organization: JGraph
       language: JavaScript
     - name: Excalidraw
-      description: Hand-drawn style collaborative whiteboard for brainstorming, sketching, and teaching. Enables informal visual communication that makes technical concepts more approachable in lectures and design thinking sessions.
+      description: Hand-drawn style collaborative whiteboard for brainstorming, sketching,
+        and teaching. Enables informal visual communication that makes technical concepts
+        more approachable in lectures and design thinking sessions.
       url: https://excalidraw.com
       docs_url: https://docs.excalidraw.com/
       stars: 88k
@@ -840,7 +866,9 @@ categories:
   - name: Documentation & Content
     items:
     - name: BookStack
-      description: Structured documentation platform with Book→Chapter→Page hierarchy for organizing institutional knowledge. Provides an alternative to wiki-style documentation for policies, procedures, and student reference materials.
+      description: Structured documentation platform with Book→Chapter→Page hierarchy
+        for organizing institutional knowledge. Provides an alternative to wiki-style
+        documentation for policies, procedures, and student reference materials.
       url: https://www.bookstackapp.com
       docs_url: https://www.bookstackapp.com/docs/
       stars: 16k
@@ -860,7 +888,9 @@ categories:
       organization: BookStack
       language: PHP
     - name: TYPO3
-      description: Enterprise content management system widely used for institutional websites in German education. Provides flexible page templating, multi-language support, and a large extension ecosystem for public-facing institutional websites.
+      description: Enterprise content management system widely used for institutional
+        websites in German education. Provides flexible page templating, multi-language
+        support, and a large extension ecosystem for public-facing institutional websites.
       url: https://typo3.org
       docs_url: https://docs.typo3.org/
       stars: 2.5k
@@ -889,7 +919,9 @@ categories:
   - name: Project Management
     items:
     - name: OpenProject
-      description: Enterprise project management platform with agile boards, timelines, and resource planning. Supports research project coordination, teaching schedule planning, and cross-departmental collaboration with LDAP authentication.
+      description: Enterprise project management platform with agile boards, timelines,
+        and resource planning. Supports research project coordination, teaching schedule
+        planning, and cross-departmental collaboration with LDAP authentication.
       url: https://www.openproject.org
       docs_url: https://docs.openproject.org/
       stars: 9.5k
@@ -910,7 +942,9 @@ categories:
       organization: OpenProject GmbH
       language: Ruby
     - name: Planka
-      description: Kanban board application with real-time collaboration and LTI integration. Provides visual task management for student projects, lab organization, and committee coordination with drag-and-drop interface.
+      description: Kanban board application with real-time collaboration and LTI integration.
+        Provides visual task management for student projects, lab organization, and
+        committee coordination with drag-and-drop interface.
       url: https://planka.app
       docs_url: https://github.com/plankanban/planka#readme
       stars: 8k
@@ -932,14 +966,17 @@ categories:
       language: JavaScript
 - id: development
   name: Development & DevOps
-  description: Version control, CI/CD, and developer tooling for institutional development workflows
+  description: Version control, CI/CD, and developer tooling for institutional development
+    workflows
   color: '#B91C1C'
   icon: 🔧
   subcategories:
   - name: Version Control
     items:
     - name: Forgejo
-      description: Lightweight self-hosted Git forge fork with community-driven development and Codeberg hosting. Provides version control and code review for custom institutional tools, scripts, and configuration management.
+      description: Lightweight self-hosted Git forge fork with community-driven development
+        and Codeberg hosting. Provides version control and code review for custom
+        institutional tools, scripts, and configuration management.
       url: https://forgejo.org
       docs_url: https://forgejo.org/docs/latest/
       repository: https://codeberg.org/forgejo/forgejo
@@ -962,7 +999,9 @@ categories:
       - education
       - research
     - name: Gitea
-      description: Lightweight self-hosted Git service with repository management, code review, and project boards. Provides a familiar GitHub-like interface for version control with low resource requirements suitable for smaller institutions.
+      description: Lightweight self-hosted Git service with repository management,
+        code review, and project boards. Provides a familiar GitHub-like interface
+        for version control with low resource requirements suitable for smaller institutions.
       url: https://gitea.com
       docs_url: https://docs.gitea.com/
       repository: https://github.com/go-gitea/gitea
@@ -984,130 +1023,162 @@ categories:
       - research
   - name: CI/CD
     items:
-    - name: "ttyd"
-      description: "Browser-based Linux terminal providing full command-line access from any device."
+    - name: ttyd
+      description: Browser-based Linux terminal providing full command-line access
+        from any device.
       url: https://ttyd.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "ttyd.svg"
+      maturity: beta
+      tier: high
+      logo: ttyd.svg
       tags:
-      - "ttyd"
-      - "terminal"
-      - "ssh"
-      - "cli"
-      - "scientific-computing"
-    - name: "Slidev"
-      description: "Markdown-to-presentations tool for creating slide decks from simple Markdown files."
+      - ttyd
+      - terminal
+      - ssh
+      - cli
+      - scientific-computing
+      license: MIT
+      category: development
+    - name: Slidev
+      description: Markdown-to-presentations tool for creating slide decks from simple
+        Markdown files.
       url: https://slidev.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "slidev.svg"
+      maturity: beta
+      tier: high
+      logo: slidev.svg
       tags:
-      - "slidev"
-      - "presentations"
-      - "markdown"
-      - "slides"
-      - "scientific-computing"
-    - name: "RStudio Server"
-      description: "Professional R IDE with Shiny app support, workspace management, and OpenCloud file sync."
+      - slidev
+      - presentations
+      - markdown
+      - slides
+      - scientific-computing
+      license: MIT
+      category: development
+    - name: RStudio Server
+      description: Professional R IDE with Shiny app support, workspace management,
+        and OpenCloud file sync.
       url: https://rstudio-server.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "rstudio.svg"
+      maturity: beta
+      tier: high
+      logo: rstudio.svg
       tags:
-      - "rstudio"
-      - "r"
-      - "shiny"
-      - "statistics"
-      - "data-science"
-      - "scientific-computing"
-    - name: "Overleaf CE"
-      description: "Collaborative real-time LaTeX editor for scientific writing, theses, and academic publishing."
+      - rstudio
+      - r
+      - shiny
+      - statistics
+      - data-science
+      - scientific-computing
+      license: AGPL-3.0
+      category: development
+    - name: Overleaf CE
+      description: Collaborative real-time LaTeX editor for scientific writing, theses,
+        and academic publishing.
       url: https://overleaf-ce.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "overleaf.svg"
+      maturity: beta
+      tier: high
+      logo: overleaf.svg
       tags:
-      - "overleaf"
-      - "latex"
-      - "writing"
-      - "academic"
-      - "scientific-computing"
-    - name: "Open WebUI"
-      description: "ChatGPT-like web interface for interacting with local large language models via Ollama."
+      - overleaf
+      - latex
+      - writing
+      - academic
+      - scientific-computing
+      license: AGPL-3.0
+      category: development
+    - name: Open WebUI
+      description: ChatGPT-like web interface for interacting with local large language
+        models via Ollama.
       url: https://open-webui.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "open-webui.svg"
+      maturity: beta
+      tier: high
+      logo: open-webui.svg
       tags:
-      - "open-webui"
-      - "llm"
-      - "ai"
-      - "chatbot"
-      - "scientific-computing"
-    - name: "Ollama"
-      description: "Local LLM backend serving open-source models like llama3.2 and nomic-embed-text."
+      - open-webui
+      - llm
+      - ai
+      - chatbot
+      - scientific-computing
+      license: MIT
+      category: development
+    - name: Ollama
+      description: Local LLM backend serving open-source models like llama3.2 and
+        nomic-embed-text.
       url: https://ollama.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "ollama.svg"
+      maturity: beta
+      tier: high
+      logo: ollama.svg
       tags:
-      - "ollama"
-      - "llm"
-      - "ai"
-      - "machine-learning"
-      - "scientific-computing"
-    - name: "KasmVNC"
-      description: "Full Linux desktop environment in the browser with near-native performance."
+      - ollama
+      - llm
+      - ai
+      - machine-learning
+      - scientific-computing
+      license: MIT
+      category: development
+    - name: KasmVNC
+      description: Full Linux desktop environment in the browser with near-native
+        performance.
       url: https://kasmvnc.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "kasmvnc.svg"
+      maturity: beta
+      tier: high
+      logo: kasmvnc.svg
       tags:
-      - "kasmvnc"
-      - "desktop"
-      - "vnc"
-      - "remote-access"
-      - "scientific-computing"
-    - name: "JupyterHub"
-      description: "Multi-user Jupyter notebook server with kernels for Python, R, Julia, SageMath, and Octave."
+      - kasmvnc
+      - desktop
+      - vnc
+      - remote-access
+      - scientific-computing
+      license: GPL-3.0
+      category: development
+    - name: JupyterHub
+      description: Multi-user Jupyter notebook server with kernels for Python, R,
+        Julia, SageMath, and Octave.
       url: https://jupyterhub.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "jupyterhub.svg"
+      maturity: beta
+      tier: high
+      logo: jupyterhub.svg
       tags:
-      - "jupyter"
-      - "notebooks"
-      - "python"
-      - "r"
-      - "julia"
-      - "scientific-computing"
-    - name: "Dask Gateway"
-      description: "Distributed parallel computing cluster for scaling data science and scientific workloads."
+      - jupyter
+      - notebooks
+      - python
+      - r
+      - julia
+      - scientific-computing
+      license: BSD-3-Clause
+      category: development
+    - name: Dask Gateway
+      description: Distributed parallel computing cluster for scaling data science
+        and scientific workloads.
       url: https://dask-gateway.example.org
-      maturity: "planned"
-      tier: "high"
-      logo: "dask.svg"
+      maturity: planned
+      tier: high
+      logo: dask.svg
       tags:
-      - "dask"
-      - "distributed-computing"
-      - "parallel"
-      - "big-data"
-      - "scientific-computing"
-    - name: "code-server"
-      description: "VS Code in the browser — a full-featured browser-based IDE for development and education."
+      - dask
+      - distributed-computing
+      - parallel
+      - big-data
+      - scientific-computing
+      license: BSD-3-Clause
+      category: development
+    - name: code-server
+      description: VS Code in the browser — a full-featured browser-based IDE for
+        development and education.
       url: https://code-server.example.org
-      maturity: "beta"
-      tier: "high"
-      logo: "code-server.svg"
+      maturity: beta
+      tier: high
+      logo: code-server.svg
       tags:
-      - "code-server"
-      - "vscode"
-      - "ide"
-      - "development"
-      - "scientific-computing"
+      - code-server
+      - vscode
+      - ide
+      - development
+      - scientific-computing
+      license: MIT
+      category: development
     - name: Woodpecker CI
-      description: Community-focused CI/CD pipeline platform for Git forges with Docker-based builds. Automates testing, building, and deployment of openDesk customizations and institutional scripts on every push.
+      description: Community-focused CI/CD pipeline platform for Git forges with Docker-based
+        builds. Automates testing, building, and deployment of openDesk customizations
+        and institutional scripts on every push.
       url: https://woodpecker-ci.org
       docs_url: https://woodpecker-ci.org/docs/intro
       repository: https://github.com/woodpecker-ci/woodpecker
@@ -1137,7 +1208,9 @@ categories:
   - name: Email & Groupware
     items:
     - name: OX App Suite
-      description: Enterprise email, calendar, and groupware suite with SAML 2.0 integration. Provides Outlook-compatible email and scheduling for institutional staff with web, mobile, and desktop clients.
+      description: Enterprise email, calendar, and groupware suite with SAML 2.0 integration.
+        Provides Outlook-compatible email and scheduling for institutional staff with
+        web, mobile, and desktop clients.
       url: https://www.open-xchange.com
       docs_url: https://documentation.open-xchange.com/
       stars: '0'
@@ -1157,7 +1230,9 @@ categories:
       - research
       language: Java, JavaScript
     - name: SOGo
-      description: Lightweight groupware with native LDAP integration for email, calendar, and address book. Provides a resource-efficient alternative to OX App Suite for smaller institutions or departments.
+      description: Lightweight groupware with native LDAP integration for email, calendar,
+        and address book. Provides a resource-efficient alternative to OX App Suite
+        for smaller institutions or departments.
       url: https://www.sogo.nu
       docs_url: https://www.sogo.nu/support.html
       stars: 1.8k
@@ -1179,7 +1254,9 @@ categories:
   - name: Email Infrastructure
     items:
     - name: Dovecot
-      description: IMAP email server with Sieve filtering and quota management for institutional mailboxes. Provides efficient email delivery to webmail clients and mobile devices with shared folders and namespace management.
+      description: IMAP email server with Sieve filtering and quota management for
+        institutional mailboxes. Provides efficient email delivery to webmail clients
+        and mobile devices with shared folders and namespace management.
       url: https://www.dovecot.org
       docs_url: https://doc.dovecot.org/
       stars: '0'
@@ -1199,7 +1276,9 @@ categories:
       organization: Dovecot Community
       language: C
     - name: Postfix
-      description: MTA email server with powerful access control, TLS encryption, and content filtering. Routes all institutional email traffic with DKIM signing, SPF validation, and integration with Dovecot for IMAP delivery.
+      description: MTA email server with powerful access control, TLS encryption,
+        and content filtering. Routes all institutional email traffic with DKIM signing,
+        SPF validation, and integration with Dovecot for IMAP delivery.
       url: http://www.postfix.org
       docs_url: https://www.postfix.org/documentation.html
       stars: '0'
@@ -1220,31 +1299,10 @@ categories:
       language: C
   - name: Messaging
     items:
-    - name: "OX App Suite"
-      description: "Enterprise-ready groupware solution with email, calendar, and document collaboration tools."
-      url: https://ox-app-suite.example.org
-      maturity: "stable"
-      tier: "critical"
-      logo: "ox-app-suite.svg"
-      tags:
-      - "open-xchange"
-      - "email"
-      - "calendar"
-      - "contacts"
-      - "collaboration"
-    - name: "Element"
-      description: "Matrix-based chat with Nordeck education widgets for real-time messaging, rooms, and file sharing."
-      url: https://element.example.org
-      maturity: "stable"
-      tier: "critical"
-      logo: "element.svg"
-      tags:
-      - "element"
-      - "matrix"
-      - "chat"
-      - "messaging"
     - name: Element
-      description: Matrix-based secure messaging client with E2EE, VoIP, and bridges to IRC/Slack. Provides a privacy-respecting team chat platform with file sharing, threaded conversations, and federation with external Matrix servers.
+      description: Matrix-based secure messaging client with E2EE, VoIP, and bridges
+        to IRC/Slack. Provides a privacy-respecting team chat platform with file sharing,
+        threaded conversations, and federation with external Matrix servers.
       url: https://element.io
       docs_url: https://element.io/help
       stars: 11k
@@ -1268,7 +1326,9 @@ categories:
   - name: Support & Helpdesk
     items:
     - name: Zammad
-      description: Multi-channel helpdesk and ticketing system with email, chat, and phone integration. Enables IT support workflow management with knowledge base, customer portals, and SLA tracking for institutional IT services.
+      description: Multi-channel helpdesk and ticketing system with email, chat, and
+        phone integration. Enables IT support workflow management with knowledge base,
+        customer portals, and SLA tracking for institutional IT services.
       url: https://zammad.org
       docs_url: https://docs.zammad.org/
       stars: 4.3k
@@ -1288,7 +1348,10 @@ categories:
       organization: Zammad GmbH
       language: Ruby
     - name: LimeSurvey
-      description: Survey and questionnaire platform with LDAP authentication for teaching evaluations and institutional feedback. Supports course evaluations, campus climate surveys, research data collection, and student satisfaction tracking.
+      description: Survey and questionnaire platform with LDAP authentication for
+        teaching evaluations and institutional feedback. Supports course evaluations,
+        campus climate surveys, research data collection, and student satisfaction
+        tracking.
       url: https://www.limesurvey.org
       docs_url: https://manual.limesurvey.org/
       stars: 2.8k
@@ -1309,14 +1372,17 @@ categories:
       language: PHP
 - id: accessibility
   name: Accessibility & Inclusion
-  description: Accessibility testing and inclusive technology tools for equitable educational access
+  description: Accessibility testing and inclusive technology tools for equitable
+    educational access
   color: '#9333EA'
   icon: ♿
   subcategories:
   - name: Accessibility Testing
     items:
     - name: Pa11y
-      description: Automated accessibility testing engine for WCAG 2.1 compliance checking. Enables continuous monitoring of institutional websites and learning platforms for accessibility barriers affecting students with disabilities.
+      description: Automated accessibility testing engine for WCAG 2.1 compliance
+        checking. Enables continuous monitoring of institutional websites and learning
+        platforms for accessibility barriers affecting students with disabilities.
       url: https://pa11y.org
       docs_url: https://docs.pa11y.org/
       repository: https://github.com/pa11y/pa11y

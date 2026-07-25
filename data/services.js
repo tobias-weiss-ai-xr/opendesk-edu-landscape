@@ -1152,6 +1152,178 @@ window.__LANDSCAPE_DATA = {
           "name": "CI/CD",
           "items": [
             {
+              "name": "ttyd",
+              "description": "Browser-based Linux terminal providing full command-line access from any device.",
+              "url": "https://ttyd.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "ttyd.svg",
+              "tags": [
+                "ttyd",
+                "terminal",
+                "ssh",
+                "cli",
+                "scientific-computing"
+              ],
+              "license": "MIT",
+              "category": "development"
+            },
+            {
+              "name": "Slidev",
+              "description": "Markdown-to-presentations tool for creating slide decks from simple Markdown files.",
+              "url": "https://slidev.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "slidev.svg",
+              "tags": [
+                "slidev",
+                "presentations",
+                "markdown",
+                "slides",
+                "scientific-computing"
+              ],
+              "license": "MIT",
+              "category": "development"
+            },
+            {
+              "name": "RStudio Server",
+              "description": "Professional R IDE with Shiny app support, workspace management, and OpenCloud file sync.",
+              "url": "https://rstudio-server.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "rstudio.svg",
+              "tags": [
+                "rstudio",
+                "r",
+                "shiny",
+                "statistics",
+                "data-science",
+                "scientific-computing"
+              ],
+              "license": "AGPL-3.0",
+              "category": "development"
+            },
+            {
+              "name": "Overleaf CE",
+              "description": "Collaborative real-time LaTeX editor for scientific writing, theses, and academic publishing.",
+              "url": "https://overleaf-ce.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "overleaf.svg",
+              "tags": [
+                "overleaf",
+                "latex",
+                "writing",
+                "academic",
+                "scientific-computing"
+              ],
+              "license": "AGPL-3.0",
+              "category": "development"
+            },
+            {
+              "name": "Open WebUI",
+              "description": "ChatGPT-like web interface for interacting with local large language models via Ollama.",
+              "url": "https://open-webui.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "open-webui.svg",
+              "tags": [
+                "open-webui",
+                "llm",
+                "ai",
+                "chatbot",
+                "scientific-computing"
+              ],
+              "license": "MIT",
+              "category": "development"
+            },
+            {
+              "name": "Ollama",
+              "description": "Local LLM backend serving open-source models like llama3.2 and nomic-embed-text.",
+              "url": "https://ollama.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "ollama.svg",
+              "tags": [
+                "ollama",
+                "llm",
+                "ai",
+                "machine-learning",
+                "scientific-computing"
+              ],
+              "license": "MIT",
+              "category": "development"
+            },
+            {
+              "name": "KasmVNC",
+              "description": "Full Linux desktop environment in the browser with near-native performance.",
+              "url": "https://kasmvnc.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "kasmvnc.svg",
+              "tags": [
+                "kasmvnc",
+                "desktop",
+                "vnc",
+                "remote-access",
+                "scientific-computing"
+              ],
+              "license": "GPL-3.0",
+              "category": "development"
+            },
+            {
+              "name": "JupyterHub",
+              "description": "Multi-user Jupyter notebook server with kernels for Python, R, Julia, SageMath, and Octave.",
+              "url": "https://jupyterhub.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "jupyterhub.svg",
+              "tags": [
+                "jupyter",
+                "notebooks",
+                "python",
+                "r",
+                "julia",
+                "scientific-computing"
+              ],
+              "license": "BSD-3-Clause",
+              "category": "development"
+            },
+            {
+              "name": "Dask Gateway",
+              "description": "Distributed parallel computing cluster for scaling data science and scientific workloads.",
+              "url": "https://dask-gateway.example.org",
+              "maturity": "planned",
+              "tier": "high",
+              "logo": "dask.svg",
+              "tags": [
+                "dask",
+                "distributed-computing",
+                "parallel",
+                "big-data",
+                "scientific-computing"
+              ],
+              "license": "BSD-3-Clause",
+              "category": "development"
+            },
+            {
+              "name": "code-server",
+              "description": "VS Code in the browser — a full-featured browser-based IDE for development and education.",
+              "url": "https://code-server.example.org",
+              "maturity": "beta",
+              "tier": "high",
+              "logo": "code-server.svg",
+              "tags": [
+                "code-server",
+                "vscode",
+                "ide",
+                "development",
+                "scientific-computing"
+              ],
+              "license": "MIT",
+              "category": "development"
+            },
+            {
               "name": "Woodpecker CI",
               "description": "Community-focused CI/CD pipeline platform for Git forges with Docker-based builds. Automates testing, building, and deployment of openDesk customizations and institutional scripts on every push.",
               "url": "https://woodpecker-ci.org",
@@ -1411,7 +1583,7 @@ window.__LANDSCAPE_DATA = {
     }
   ],
   "metadata": {
-    "total_services": 49,
+    "total_services": 59,
     "total_categories": 11,
     "license_breakdown": [
       {
@@ -1420,7 +1592,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "license": "AGPL-3.0",
-        "count": 10
+        "count": 12
       },
       {
         "license": "Elastic License",
@@ -1428,7 +1600,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "license": "MIT",
-        "count": 6
+        "count": 11
       },
       {
         "license": "Zlib",
@@ -1440,7 +1612,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "license": "GPL-3.0",
-        "count": 5
+        "count": 6
       },
       {
         "license": "OpenLDAP Public License",
@@ -1459,6 +1631,10 @@ window.__LANDSCAPE_DATA = {
         "count": 1
       },
       {
+        "license": "BSD-3-Clause",
+        "count": 2
+      },
+      {
         "license": "Open-Xchange License",
         "count": 1
       },
@@ -1474,7 +1650,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "tier": "high",
-        "count": 18
+        "count": 28
       },
       {
         "tier": "standard",
@@ -1493,6 +1669,14 @@ window.__LANDSCAPE_DATA = {
       {
         "level": "production",
         "count": 44
+      },
+      {
+        "level": "beta",
+        "count": 9
+      },
+      {
+        "level": "planned",
+        "count": 1
       }
     ]
   }
