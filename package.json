@@ -8,7 +8,14 @@
     "serve": "python3 -m http.server 8000",
     "build": "node scripts/generate-data.js",
     "prebuild": "node scripts/generate-data.js",
-    "validate": "node scripts/generate-data.js && echo '✅ data/services.js is up-to-date'"
+    "validate": "node scripts/generate-data.js && git diff --exit-code data/services.js && echo '✅ data/services.js is up-to-date'",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:mutation": "stryker run"
   },
   "keywords": [
     "open-source",
@@ -21,6 +28,14 @@
   "author": "Tobias Weiß and openDesk Edu Contributors",
   "license": "Apache-2.0",
   "devDependencies": {
-    "js-yaml": "^5.2.1"
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/vitest-runner": "^9.6.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "fast-check": "^4.9.0",
+    "js-yaml": "^5.2.1",
+    "jsdom": "^30.0.1",
+    "vitest": "^4.1.10"
   }
 }

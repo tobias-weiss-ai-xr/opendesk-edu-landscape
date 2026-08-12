@@ -97,11 +97,49 @@ landscape.opendesk-edu.org/
 │   ├── services.yaml       # Landscape data (YAML — source of truth)
 │   └── services.js         # Auto-generated from YAML (via npm run build)
 ├── scripts/
-│   └── generate-data.js    # YAML → JS generator
+│   ├── generate-data.js    # YAML → JS generator (CLI)
+│   └── lib/
+│       └── data-pipeline.js # Parse → validate → metadata → serialize (unit-tested)
+├── tests/
+│   ├── unit/               # Vitest unit + data-integrity (golden-file) tests
+│   ├── property/           # fast-check property-based tests
+│   └── e2e/                # Playwright browser tests (incl. axe-core a11y)
+├── vitest.config.mjs       # Unit test config + coverage thresholds
+├── playwright.config.js    # E2E config (system Chromium fallback)
+├── stryker.config.json     # Mutation testing config
 ├── package.json            # Project metadata
 ├── CNAME                   # Custom domain configuration
 └── README.md               # This file
 ```
+
+## Testing
+
+The project applies a state-of-the-art test pyramid — from fast unit checks to
+full browser E2E — all enforced in CI (GitLab + GitHub Actions).
+
+| Layer | Tool | What it covers |
+|---|---|---|
+| Unit (contract) | Vitest | `data-pipeline` validation: required fields, enums, cross-references, logo extension/content parity, metadata derivation |
+| Data integrity | Vitest | The real 109-service dataset: counts, distributions, URL/repo allowlists, no ONLYOFFICE, golden-file parity |
+| Property-based | fast-check | Arbitrary landscapes: valid data never errors, deleting any required field always errors, breakdown sums invariant |
+| Frontend (jsdom) | Vitest + jsdom | `LandscapeApp` logic: filtering, search highlighting, chips, modal, escaping |
+| E2E | Playwright | Real Chromium: rendering, search/filter/chips, modal, theme persistence, exports, HTTP logo contract |
+| Accessibility | axe-core | WCAG AA checks on landing page + modal (contrast, ARIA roles) |
+| Visual regression | Playwright | Golden screenshots (opt-in via `VISUAL=1`) |
+| Mutation | Stryker | Measures test-suite effectiveness (84% score, enforced ≥60%) |
+
+```bash
+npm test                 # unit + property + e2e
+npm run test:unit        # vitest unit/property/data-integrity (fast)
+npm run test:coverage    # + v8 coverage report with thresholds (≥85% lines)
+npm run test:e2e         # playwright browser tests
+npm run test:e2e:ui      # interactive Playwright UI
+npm run test:mutation    # stryker mutation testing (measures test quality)
+```
+
+**Coverage gates** (vitest.config.mjs): ≥85% statements/lines/functions, ≥80% branches — the pipeline fails below these.
+**Mutation gate** (stryker.config.json): break threshold 60%, high 80%.
+
 
 ## Contributing
 

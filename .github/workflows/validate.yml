@@ -25,3 +25,23 @@ jobs:
           test -f styles.css && echo 'styles.css OK'
           test -f script.js && echo 'script.js OK'
           test -f data/services.yaml && echo 'services.yaml OK'
+
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Unit + property tests (vitest + fast-check)
+        run: npm run test:unit
+      - name: Coverage gate (thresholds in vitest.config.mjs)
+        run: npm run test:coverage
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/

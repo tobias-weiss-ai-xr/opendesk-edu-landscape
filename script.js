@@ -169,7 +169,7 @@ class LandscapeApp {
   highlightText(text) {
     const escaped = this.escapeHtml(text);
     if (!this.searchQuery) return escaped;
-    const q = escaped.trim();
+    const q = this.escapeHtml(this.searchQuery.trim());
     if (!q) return escaped;
     try {
       const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
@@ -657,3 +657,9 @@ class LandscapeApp {
 document.addEventListener('DOMContentLoaded', () => {
   new LandscapeApp();
 });
+
+// Testability seam: expose the class for unit tests without changing
+// browser behavior (module is undefined in the browser).
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { LandscapeApp };
+}
