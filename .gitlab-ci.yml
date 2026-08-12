@@ -18,6 +18,9 @@ validate:
 
 build:
   stage: build
+  before_script:
+    # node:22-alpine ships no git — needed for the staleness check below
+    - apk add --no-cache git
   script:
     - npm ci
     - node scripts/generate-data.js
