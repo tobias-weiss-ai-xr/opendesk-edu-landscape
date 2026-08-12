@@ -71,12 +71,10 @@ test.describe('search & filters', () => {
     await expect(page.locator('#search')).toHaveValue('');
   });
 
-  test('tier filter reduces the grid', async ({ page }) => {
+  test('tier filter reduces the grid to exactly the critical set', async ({ page }) => {
     await page.click('.filter-btn[data-filter-type="tier"][data-filter="critical"]');
-    await expect(page.locator('.item-card').first()).toBeVisible();
-    const count = await page.locator('.item-card').count();
-    expect(count).toBeGreaterThan(0);
-    expect(count).toBeLessThan(TOTAL_SERVICES);
+    await expect(page.locator('#search-results')).toContainText('17 of 109 services shown');
+    await expect(page.locator('.item-card')).toHaveCount(17);
   });
 
   test('beta maturity filter returns exactly World-Office', async ({ page }) => {
