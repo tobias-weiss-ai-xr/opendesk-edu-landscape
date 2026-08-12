@@ -21,7 +21,8 @@
   <header>
     <div class="header-container">
       <div class="header-content">
-        <h1>🌄 openDesk Edu Landscape</h1>
+        <p class="eyebrow">🌄 open-source ecosystem map</p>
+        <h1>openDesk Edu Landscape</h1>
         <p class="subtitle">Interactive map of the openDesk Edu open-source ecosystem</p>
         <p class="stats" id="header-stats">
           <strong id="stat-services">-</strong> Services •
@@ -31,7 +32,7 @@
       </div>
       <div class="header-actions">
         <button id="theme-toggle" class="btn btn-secondary" title="Toggle theme">🌙</button>
-        <div class="export-buttons" style="display:flex;gap:0.5rem;">
+        <div class="export-buttons">
           <button id="export-csv" class="btn btn-secondary" title="Export as CSV">📥 CSV</button>
           <button id="export-json" class="btn btn-secondary" title="Export as JSON">📥 JSON</button>
         </div>
@@ -44,52 +45,60 @@
   <main>
     <section class="controls">
       <div class="search-container">
-        <input
-          type="text"
-          id="search"
-          placeholder="🔍 Search services, categories, or tags...  (Ctrl+K / ⌘K)"
-          autocomplete="off"
-        >
+        <div class="search-row">
+          <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search services, categories, or tags...  (Ctrl+K / ⌘K)"
+            autocomplete="off"
+          >
+          <span id="search-results" class="search-results"></span>
+        </div>
         <div class="filter-section">
           <strong>Tier:</strong>
           <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="critical">Critical</button>
-            <button class="filter-btn" data-filter="high">High</button>
-            <button class="filter-btn" data-filter="standard">Standard</button>
-            <button class="filter-btn" data-filter="low">Low</button>
+            <button class="filter-btn active" data-filter-type="tier" data-filter="all">All</button>
+            <button class="filter-btn" data-filter-type="tier" data-filter="critical">Critical</button>
+            <button class="filter-btn" data-filter-type="tier" data-filter="high">High</button>
+            <button class="filter-btn" data-filter-type="tier" data-filter="standard">Standard</button>
+            <button class="filter-btn" data-filter-type="tier" data-filter="low">Low</button>
           </div>
         </div>
         <div class="filter-section">
           <strong>Maturity:</strong>
           <div class="filter-buttons">
-            <button class="filter-btn" data-filter-type="maturity" data-filter="all">All</button>
+            <button class="filter-btn active" data-filter-type="maturity" data-filter="all">All</button>
             <button class="filter-btn" data-filter-type="maturity" data-filter="graduated">Graduated</button>
             <button class="filter-btn" data-filter-type="maturity" data-filter="production">Production</button>
-            <button class="filter-btn" data-filter-type="maturity" data-filter="stable">Stable</button>
+            <button class="filter-btn" data-filter-type="maturity" data-filter="beta">Beta</button>
           </div>
         </div>
+        <div id="active-filters" class="active-filters" aria-label="Active filters"></div>
       </div>
     </section>
 
-    <nav class="category-nav" id="category-nav">
+    <nav class="category-nav" id="category-nav" aria-label="Category navigation">
       <div id="category-nav-items"></div>
     </nav>
 
-    <section class="stats-bar" id="stats-bar">
+    <section class="stats-bar" id="stats-bar" aria-label="Ecosystem statistics">
       <div class="stat-card">
+        <div class="stat-icon">🧩</div>
         <div class="stat-number" id="stat-count-services">-</div>
         <div class="stat-label">Services</div>
       </div>
       <div class="stat-card">
+        <div class="stat-icon">🗂️</div>
         <div class="stat-number" id="stat-count-categories">-</div>
         <div class="stat-label">Categories</div>
       </div>
       <div class="stat-card">
+        <div class="stat-icon">📜</div>
         <div class="stat-number" id="stat-count-licenses">-</div>
         <div class="stat-label">License Types</div>
       </div>
       <div class="stat-card">
+        <div class="stat-icon">🔓</div>
         <div class="stat-number">100%</div>
         <div class="stat-label">Open Source</div>
       </div>
@@ -115,8 +124,22 @@
       </div>
     </div>
 
-    <section id="landscape" class="landscape">
+    <section id="landscape" class="landscape" aria-label="Service landscape">
       <!-- Categories will be rendered here -->
+    </section>
+
+    <section class="legend" aria-label="Legend">
+      <h3>Tier Legend</h3>
+      <div class="legend-items">
+        <span class="legend-item"><span class="legend-swatch tier-critical"></span> Critical — foundation</span>
+        <span class="legend-item"><span class="legend-swatch tier-high"></span> High — core workflows</span>
+        <span class="legend-item"><span class="legend-swatch tier-standard"></span> Standard — productivity</span>
+        <span class="legend-item"><span class="legend-swatch tier-low"></span> Low — supporting</span>
+        <span class="legend-sep"></span>
+        <span class="legend-item"><span class="legend-swatch maturity-graduated"></span> Graduated</span>
+        <span class="legend-item"><span class="legend-swatch maturity-production"></span> Production</span>
+        <span class="legend-item"><span class="legend-swatch maturity-beta"></span> Beta</span>
+      </div>
     </section>
 
     <section class="metadata">
@@ -140,7 +163,7 @@
     <section class="info">
       <h2>About This Landscape</h2>
       <p>
-        The <strong>openDesk Edu Landscape</strong> is an interactive map of the 25 integrated open-source services
+        The <strong>openDesk Edu Landscape</strong> is an interactive map of the open-source services
         that make up the openDesk Edu platform. Inspired by the
         <a href="https://landscape.cncf.io" target="_blank" rel="noopener">CNCF Landscape</a>, this visualization
         helps institutions, IT administrators, and developers understand the complete ecosystem.
@@ -149,9 +172,10 @@
       <h3>How to Use</h3>
       <ul>
         <li><strong>Search</strong> for specific services, categories, or tags</li>
-        <li><strong>Filter</strong> by service tier (Critical, High, Standard, Low)</li>
-        <li><strong>Click</strong> on any service to visit its website or repository</li>
+        <li><strong>Filter</strong> by service tier (Critical, High, Standard, Low) or maturity</li>
+        <li><strong>Click</strong> on any service to see details, documentation, and repository links</li>
         <li><strong>Browse</strong> by category to understand the ecosystem structure</li>
+        <li><strong>Export</strong> the full service list as CSV or JSON</li>
       </ul>
 
       <h3>Contribute</h3>
@@ -164,11 +188,8 @@
       </p>
 
       <h3>Tier Classification</h3>
-      <ul>
-        <li><strong>Critical Tier</strong> (8 services): Foundation services with 99.9% availability targets (e.g., Keycloak, Nextcloud, email infrastructure)</li>
-        <li><strong>High Tier</strong> (7 services): Important services with 99.5% availability (e.g., LMS, video conferencing, helpdesk)</li>
-        <li><strong>Standard Tier</strong> (8 services): Collaboration tools with 99.0% availability (e.g., Kanban, surveys, documentation)</li>
-        <li><strong>Low Tier</strong> (2 services): Supporting tools (e.g., stateless diagram editors)</li>
+      <ul id="tier-summary">
+        <!-- Populated dynamically from the service data -->
       </ul>
 
       <h3>Related Resources</h3>
@@ -193,9 +214,11 @@
     </p>
   </footer>
 
-  <div id="detail-modal" class="modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;justify-content:center;align-items:center;padding:2rem;">
-    <div style="background:var(--dark);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;position:relative;">
-      <button id="modal-close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--gray);font-size:1.5rem;cursor:pointer;" aria-label="Close">&times;</button>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div id="detail-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Service details">
+    <div class="modal-box">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
       <div id="modal-content"></div>
     </div>
   </div>

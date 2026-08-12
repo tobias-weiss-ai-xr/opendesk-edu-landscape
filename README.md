@@ -20,36 +20,42 @@ The openDesk Edu Landscape is an interactive visualization of the complete ecosy
 
 ## Features
 
-✅ **Interactive Visualization** - Browse services across 5 categories
+✅ **Interactive Visualization** - Browse services across 12 categories
 🔍 **Powerful Search** - Find services by name, description, or tags
 🎯 **Tier Filtering** - Filter by service tier (Critical, High, Standard, Low)
-📈 **Statistics** - View license distribution, tier breakdown, and ecosystem metrics
-🔗 **Direct Links** - Click any service to visit its website or repository
+📈 **Statistics** - View license distribution, tier breakdown (with donut chart), and ecosystem metrics
+🔗 **Direct Links** - Click any service to see details, documentation, and repository
 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+🌙 **Light/Dark Theme** - Toggle between dark and light mode
+🔎 **Search highlighting** - Matched terms are highlighted in service cards
+🧹 **Active filter chips** - One-click removal of active filters and search terms
 🌍 **Open Source** - Apache-2.0 licensed, community-driven
 
 ## Categories
 
-The services are organized into 9 main categories:
+The services are organized into 12 main categories:
 
-1. **Operations & Infrastructure** (8 services) - Prometheus, Grafana, Loki, Harbor, Traefik, Docker, Restic, Alertmanager
-2. **Security** (1 service) - Vaultwarden
-3. **Analytics & Search** (2 services) - Matomo, Meilisearch
-4. **Media** (1 service) - Jellyfin
-5. **Identity & Access** (3 services) - Keycloak, Nubus, Self-Service Password
-6. **Learning Management** (5 services) - ILIAS, Moodle, BigBlueButton, Jitsi, XWiki
-7. **Content & Collaboration** (10 services) - Nextcloud, OpenCloud, Collabora, Etherpad, CryptPad, Notes, Draw.io, Excalidraw, BookStack, TYPO3
-8. **Project Management** (2 services) - OpenProject, Planka
-9. **Communication** (7 services) - OX App Suite, SOGo, Dovecot, Postfix, Element, Zammad, LimeSurvey
+1. **Operations & Infrastructure** (19 services) - Prometheus, Grafana, Loki, Uptime Kuma, Grafana Tempo, Traefik, Docker, Portainer, MinIO, Kubernetes, Helm, Harbor, Trivy, Argo CD, Cert-Manager, Restic, Velero
+2. **Security** (7 services) - Vaultwarden, ClamAV, Wazuh, Fail2ban, CrowdSec, Greenbone (OpenVAS), OWASP ZAP
+3. **Analytics & Search** (6 services) - Matomo, Apache Superset, Plausible, Meilisearch, Elasticsearch, OpenSearch
+4. **Media** (3 services) - Jellyfin, PeerTube, Owncast
+5. **Identity & Access** (9 services) - Keycloak, Nubus, Shibboleth IdP, Apereo CAS, Authelia, authentik, Self-Service Password, OpenLDAP, LDAP Account Manager
+6. **Learning Management** (10 services) - ILIAS, Moodle, OpenOlat, Stud.IP, BigBlueButton, Jitsi, XWiki, H5P, Mahara, edu-sharing
+7. **Content & Collaboration** (14 services) - Nextcloud, OpenCloud, Collabora, Etherpad, CryptPad, Notes, World-Office, Draw.io, Excalidraw, BookStack, TYPO3, MediaWiki, DokuWiki, HedgeDoc
+8. **Project Management** (6 services) - OpenProject, Planka, Taiga, Redmine, Vikunja, Kanboard
+9. **Development & DevOps** (18 services) - Forgejo, Gitea, GitLab CE, Woodpecker CI, Jenkins, JupyterHub, RStudio, Overleaf, Dask Gateway, code-server, KasmVNC, Slidev, Ansible, OpenTofu, SonarQube, Ollama, Open WebUI, ttyd
+10. **Communication** (12 services) - OX App Suite, SOGo, Radicale, Dovecot, Postfix, Roundcube, Element, Synapse, Mattermost, Rocket.Chat, Zammad, LimeSurvey
+11. **Research & Publishing** (2 services) - Open Journal Systems (OJS), DSpace
+12. **Accessibility & Inclusion** (3 services) - Pa11y, axe-core, Lighthouse
 
 ## Service Tiers
 
 Services are classified by criticality:
 
-- **Critical Tier** (14 services) - Foundation services with 99.9% availability
-- **High Tier** (12 services) - Important services with 99.5% availability
-- **Standard Tier** (11 services) - Collaboration tools with 99.0% availability
-- **Low Tier** (2 services) - Supporting tools
+- **Critical Tier** (17 services) - Foundation services with 99.9% availability
+- **High Tier** (45 services) - Important services with 99.5% availability
+- **Standard Tier** (43 services) - Collaboration tools with 99.0% availability
+- **Low Tier** (4 services) - Supporting tools
 
 ## How to Use
 
@@ -184,7 +190,7 @@ Copyright 2026 openDesk Edu Contributors
 ## Contact
 
 - **GitHub Issues**: https://github.com/opendesk-edu/landscape.opendesk-edu.org/issues
-- **Email**: tobias.weiss@uni-marburg.de
+- **Email**: tobias.weiss@opendesk-edu.org
 - **Website**: https://opendesk-edu.org
 
 ---

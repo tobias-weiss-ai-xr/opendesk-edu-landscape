@@ -187,7 +187,7 @@ Add a new category object to the `categories` array in `script.js`:
 ## Support
 
 If you need help with deployment:
-- 📧 Email: tobias.weiss@uni-marburg.de
+- 📧 Email: tobias.weiss@opendesk-edu.org
 - 🐛 Issues: Create an issue in the repository once created
 - 📖 Documentation: See README.md in the repository
 

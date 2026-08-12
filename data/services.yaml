@@ -67,7 +67,7 @@ categories:
       subcategory: Monitoring & Observability
       tier: high
       maturity: production
-      logo: loki.svg
+      logo: loki.png
       tags:
       - logs
       - aggregation
@@ -125,6 +125,52 @@ categories:
       - analytics
       - gdpr
       - research
+    - name: Uptime Kuma
+      description: Self-hosted uptime monitoring and status page tool with 90+ notification
+        integrations. Provides real-time availability dashboards for institutional
+        services with public status pages for students and staff.
+      url: https://uptime.kuma.pet
+      docs_url: https://github.com/louislam/uptime-kuma/wiki
+      stars: 60k
+      repository: https://github.com/louislam/uptime-kuma
+      license: MIT
+      category: operations
+      subcategory: Monitoring & Observability
+      tier: standard
+      maturity: production
+      logo: uptime-kuma.svg
+      tags:
+      - uptime
+      - monitoring
+      - status-page
+      - notifications
+      - infrastructure
+      - education
+      organization: Louis Lam (community)
+      language: JavaScript, Vue
+    - name: Grafana Tempo
+      description: High-scale, cost-effective distributed tracing backend with
+        Grafana-native integration. Correlates traces across microservices to debug
+        performance issues in distributed openDesk deployments.
+      url: https://grafana.com/oss/tempo
+      docs_url: https://grafana.com/docs/tempo/latest/
+      stars: 4k
+      repository: https://github.com/grafana/tempo
+      license: AGPL-3.0
+      category: operations
+      subcategory: Monitoring & Observability
+      tier: standard
+      maturity: production
+      logo: tempo.svg
+      tags:
+      - tracing
+      - observability
+      - grafana
+      - infrastructure
+      - gdpr
+      - research
+      organization: Grafana Labs
+      language: Go
   - name: Container & Infrastructure
     items:
     - name: Traefik
@@ -166,7 +212,7 @@ categories:
       subcategory: Container & Infrastructure
       tier: standard
       maturity: graduated
-      logo: docker.svg
+      logo: docker.png
       tags:
       - containers
       - runtime
@@ -192,7 +238,7 @@ categories:
       subcategory: Container & Infrastructure
       tier: standard
       maturity: production
-      logo: portainer-logo.png
+      logo: portainer-logo.svg
       tags:
       - ui
       - containers
@@ -201,6 +247,78 @@ categories:
       - kubernetes
       - gdpr
       - research
+    - name: MinIO
+      description: High-performance S3-compatible object storage for the openDesk
+        data layer. Stores portal configuration, application data, and backups with
+        erasure coding, versioning, and replication for institutional resilience.
+      url: https://min.io
+      docs_url: https://min.io/docs/minio/container/index.html
+      stars: 50k
+      repository: https://github.com/minio/minio
+      license: AGPL-3.0
+      category: operations
+      subcategory: Container & Infrastructure
+      tier: critical
+      maturity: production
+      logo: minio.svg
+      tags:
+      - object-storage
+      - s3
+      - storage
+      - kubernetes
+      - infrastructure
+      - gdpr
+      - research
+      organization: MinIO Inc.
+      language: Go
+    - name: Kubernetes
+      description: Industry-standard container orchestration platform for automated
+        deployment, scaling, and management of containerized applications. Provides
+        the foundation for the entire openDesk Edu deployment on K3s with self-healing
+        workloads and rolling updates.
+      url: https://kubernetes.io
+      docs_url: https://kubernetes.io/docs/
+      stars: 112k
+      repository: https://github.com/kubernetes/kubernetes
+      license: Apache-2.0
+      category: operations
+      subcategory: Container & Infrastructure
+      tier: critical
+      maturity: graduated
+      logo: kubernetes.svg
+      tags:
+      - kubernetes
+      - orchestration
+      - containers
+      - cncf
+      - infrastructure
+      - gdpr
+      - research
+      organization: Cloud Native Computing Foundation (CNCF)
+      language: Go
+    - name: Helm
+      description: Package manager for Kubernetes that bundles applications into
+        versioned, shareable charts. Enables reproducible openDesk deployments with
+        a single command and parameterized configuration values.
+      url: https://helm.sh
+      docs_url: https://helm.sh/docs/
+      stars: 27k
+      repository: https://github.com/helm/helm
+      license: Apache-2.0
+      category: operations
+      subcategory: Container & Infrastructure
+      tier: high
+      maturity: graduated
+      logo: helm.svg
+      tags:
+      - kubernetes
+      - charts
+      - packaging
+      - cncf
+      - infrastructure
+      - research
+      organization: Cloud Native Computing Foundation (CNCF)
+      language: Go
   - name: Container Registry
     items:
     - name: Harbor
@@ -227,6 +345,82 @@ categories:
       - gdpr
       - research
       language: Go
+    - name: Trivy
+      description: Comprehensive vulnerability scanner for container images, filesystems,
+        and Git repositories. Integrates with Harbor to continuously scan openDesk
+        images for CVEs and misconfigurations before production deployment.
+      url: https://trivy.dev
+      docs_url: https://trivy.dev/docs/
+      stars: 24k
+      repository: https://github.com/aquasecurity/trivy
+      license: Apache-2.0
+      category: operations
+      subcategory: Container Registry
+      tier: high
+      maturity: production
+      logo: trivy.png
+      tags:
+      - containers
+      - vulnerability-scanning
+      - security
+      - cve
+      - devops
+      - gdpr
+      - research
+      organization: Aqua Security
+      language: Go
+  - name: Cloud-Native Tooling
+    items:
+    - name: Argo CD
+      description: Declarative GitOps continuous delivery tool for Kubernetes with
+        automated sync of infrastructure from Git repositories. Enables reproducible,
+        auditable deployment of the entire openDesk stack from version-controlled
+        manifests.
+      url: https://argo-cd.readthedocs.io
+      docs_url: https://argo-cd.readthedocs.io/en/stable/
+      stars: 19k
+      repository: https://github.com/argoproj/argo-cd
+      license: Apache-2.0
+      category: operations
+      subcategory: Cloud-Native Tooling
+      tier: high
+      maturity: graduated
+      logo: argo-cd.svg
+      tags:
+      - gitops
+      - kubernetes
+      - continuous-delivery
+      - cncf
+      - deployment
+      - infrastructure
+      - research
+      organization: Cloud Native Computing Foundation (CNCF)
+      language: Go
+    - name: Cert-Manager
+      description: Automated TLS certificate management for Kubernetes with Let's
+        Encrypt and internal CA support. Issues, renews, and rotates certificates
+        for all openDesk ingress endpoints without manual intervention.
+      url: https://cert-manager.io
+      docs_url: https://cert-manager.io/docs/
+      stars: 12k
+      repository: https://github.com/cert-manager/cert-manager
+      license: Apache-2.0
+      category: operations
+      subcategory: Cloud-Native Tooling
+      tier: high
+      maturity: graduated
+      logo: cert-manager.svg
+      tags:
+      - tls
+      - certificates
+      - letsencrypt
+      - kubernetes
+      - cncf
+      - security
+      - infrastructure
+      - research
+      organization: Cloud Native Computing Foundation (CNCF)
+      language: Go
   - name: Backup & Recovery
     items:
     - name: Restic (k8up)
@@ -250,6 +444,30 @@ categories:
       - gdpr
       - research
       organization: VSHN
+      language: Go
+    - name: Velero
+      description: Backup and restore tool for Kubernetes cluster resources and
+        persistent volumes. Provides scheduled, versioned backups of the entire
+        openDesk namespace with disaster recovery to object storage.
+      url: https://velero.io
+      docs_url: https://velero.io/docs/
+      stars: 9k
+      repository: https://github.com/vmware-tanzu/velero
+      license: Apache-2.0
+      category: operations
+      subcategory: Backup & Recovery
+      tier: high
+      maturity: graduated
+      logo: velero.svg
+      tags:
+      - kubernetes
+      - backup
+      - disaster-recovery
+      - cncf
+      - storage
+      - infrastructure
+      - research
+      organization: Cloud Native Computing Foundation (CNCF)
       language: Go
 - id: security
   name: Security
@@ -300,7 +518,7 @@ categories:
       subcategory: Antivirus
       tier: high
       maturity: production
-      logo: clamav.png
+      logo: clamav.svg
       tags:
       - antivirus
       - email
@@ -309,6 +527,132 @@ categories:
       - malware
       - gdpr
       - education
+  - name: Threat Detection
+    items:
+    - name: Wazuh
+      description: Open-source SIEM and XDR platform for threat detection, log analysis,
+        and file integrity monitoring. Provides centralized security monitoring of
+        institutional servers, endpoints, and cloud workloads with compliance reporting.
+      url: https://wazuh.com
+      docs_url: https://documentation.wazuh.com/
+      stars: 10k
+      repository: https://github.com/wazuh/wazuh
+      license: GPL-2.0
+      category: security
+      subcategory: Threat Detection
+      tier: high
+      maturity: production
+      logo: wazuh.svg
+      tags:
+      - siem
+      - xdr
+      - security
+      - monitoring
+      - compliance
+      - gdpr
+      - education
+      - research
+      organization: Wazuh Inc.
+      language: C, Python
+  - name: Network Protection
+    items:
+    - name: Fail2ban
+      description: Intrusion prevention framework that bans hostile IP addresses
+        after repeated failed login attempts. Protects SSH, web services, and mail
+        servers of educational institutions from brute-force attacks.
+      url: https://www.fail2ban.org
+      docs_url: https://fail2ban.readthedocs.io/
+      stars: 12k
+      repository: https://github.com/fail2ban/fail2ban
+      license: GPL-2.0
+      category: security
+      subcategory: Network Protection
+      tier: standard
+      maturity: production
+      logo: fail2ban.svg
+      tags:
+      - intrusion-prevention
+      - firewall
+      - security
+      - brute-force
+      - infrastructure
+      - education
+      organization: Fail2ban Contributors
+      language: Python
+    - name: CrowdSec
+      description: Collaborative intrusion prevention system that shares threat
+        intelligence between instances worldwide. Detects and blocks abusive IPs
+        in real time with a rich set of parsers and scenarios for web services.
+      url: https://www.crowdsec.net
+      docs_url: https://docs.crowdsec.net/
+      stars: 9k
+      repository: https://github.com/crowdsecurity/crowdsec
+      license: MIT
+      category: security
+      subcategory: Network Protection
+      tier: standard
+      maturity: production
+      logo: crowdsec.svg
+      tags:
+      - intrusion-prevention
+      - firewall
+      - security
+      - threat-intelligence
+      - infrastructure
+      - education
+      organization: CrowdSec
+      language: Go
+  - name: Vulnerability Management
+    items:
+    - name: Greenbone (OpenVAS)
+      description: Mature open-source vulnerability management platform with the
+        OpenVAS scanner and daily-updated feed. Provides authenticated network scans,
+        CVE reporting, and remediation tracking for institutional infrastructures.
+      url: https://www.greenbone.net
+      docs_url: https://greenbone.github.io/docs/
+      stars: '0'
+      repository: https://github.com/greenbone/gvm
+      license: AGPL-3.0
+      category: security
+      subcategory: Vulnerability Management
+      tier: high
+      maturity: production
+      logo: greenbone.svg
+      tags:
+      - vulnerability-management
+      - scanning
+      - cve
+      - security
+      - compliance
+      - gdpr
+      - education
+      - research
+      organization: Greenbone Networks
+      language: C, Python
+    - name: OWASP ZAP
+      description: Free and open-source web application security scanner with automated
+        penetration testing capabilities. Finds security vulnerabilities in institutional
+        web applications and learning platforms during development and operation.
+      url: https://www.zaproxy.org
+      docs_url: https://www.zaproxy.org/docs/
+      stars: 13k
+      repository: https://github.com/zaproxy/zaproxy
+      license: Apache-2.0
+      category: security
+      subcategory: Vulnerability Management
+      tier: standard
+      maturity: production
+      logo: zap.svg
+      tags:
+      - web-security
+      - scanning
+      - pentest
+      - owasp
+      - security
+      - education
+      - research
+      organization: Software Security Project (ZAP)
+      language: Java
 - id: analytics
   name: Analytics & Search
   description: Usage analytics, privacy-friendly tracking, and unified search
@@ -339,6 +683,54 @@ categories:
       - tracking
       - education
       language: PHP
+    - name: Apache Superset
+      description: Modern open-source business intelligence and data visualization
+        platform. Enables self-service dashboards over institutional data — enrollment,
+        library usage, and research metrics — with SQL-first exploration and granular
+        row-level security.
+      url: https://superset.apache.org
+      docs_url: https://superset.apache.org/docs/intro
+      stars: 65k
+      repository: https://github.com/apache/superset
+      license: Apache-2.0
+      category: analytics
+      subcategory: Analytics
+      tier: standard
+      maturity: production
+      logo: superset.svg
+      tags:
+      - bi
+      - dashboards
+      - visualization
+      - sql
+      - analytics
+      - research
+      - education
+      organization: Apache Software Foundation
+      language: Python, TypeScript
+    - name: Plausible Analytics
+      description: Lightweight, GDPR-compliant web analytics without cookies or
+        cross-site tracking. Provides privacy-respecting visitor statistics for
+        institutional websites with a simple, fast dashboard.
+      url: https://plausible.io
+      docs_url: https://plausible.io/docs
+      stars: 21k
+      repository: https://github.com/plausible/analytics
+      license: AGPL-3.0
+      category: analytics
+      subcategory: Analytics
+      tier: standard
+      maturity: production
+      logo: plausible.png
+      tags:
+      - privacy
+      - gdpr
+      - analytics
+      - cookie-free
+      - tracking
+      - education
+      organization: Plausible Analytics
+      language: Elixir
   - name: Search
     items:
     - name: Meilisearch
@@ -387,6 +779,30 @@ categories:
       - logs
       - research
       - gdpr
+    - name: OpenSearch
+      description: Community-driven, Apache-2.0 search and analytics suite forked
+        from Elasticsearch. Provides full-text search, log analytics, and vector
+        search with an open governance model for sovereign institutional deployments.
+      url: https://opensearch.org
+      docs_url: https://opensearch.org/docs/latest/
+      stars: 10k
+      repository: https://github.com/opensearch-project/OpenSearch
+      license: Apache-2.0
+      category: analytics
+      subcategory: Search
+      tier: high
+      maturity: production
+      logo: opensearch.svg
+      tags:
+      - fulltext
+      - search
+      - logs
+      - analytics
+      - open-governance
+      - research
+      - gdpr
+      organization: OpenSearch Project
+      language: Java
 - id: media
   name: Media
   description: Video streaming and lecture recording
@@ -417,6 +833,54 @@ categories:
       - media
       - education
       language: C#
+    - name: PeerTube
+      description: Decentralized, federated video hosting platform with ActivityPub
+        support. Enables institutions to self-host lecture recordings and conference
+        videos with per-instance moderation, quotas, and transcoding.
+      url: https://joinpeertube.org
+      docs_url: https://docs.joinpeertube.org/
+      stars: 14k
+      repository: https://github.com/Chocobozzz/PeerTube
+      license: AGPL-3.0
+      category: media
+      subcategory: Video Streaming
+      tier: standard
+      maturity: production
+      logo: peertube.svg
+      tags:
+      - video
+      - federation
+      - lectures
+      - streaming
+      - media
+      - education
+      - research
+      organization: Framasoft
+      language: TypeScript, Angular
+    - name: Owncast
+      description: Self-hosted live video streaming server with chat, webhooks,
+        and federation support. Enables institutions to broadcast lectures, events,
+        and conferences without third-party streaming platforms.
+      url: https://owncast.online
+      docs_url: https://owncast.online/docs/
+      stars: 9k
+      repository: https://github.com/owncast/owncast
+      license: MIT
+      category: media
+      subcategory: Video Streaming
+      tier: standard
+      maturity: production
+      logo: owncast.svg
+      tags:
+      - video
+      - live-streaming
+      - lectures
+      - events
+      - media
+      - education
+      - research
+      organization: Owncast
+      language: Go, TypeScript
 - id: identity
   name: Identity & Access
   description: Authentication, authorization, and user management
@@ -473,6 +937,104 @@ categories:
       - research
       organization: Nubus Team
       language: Python, JavaScript
+    - name: Shibboleth IdP
+      description: Standards-based SAML identity provider used across universities
+        and research federations (DFN-AAI). Enables single sign-on for national and
+        international academic services through eduGAIN inter-federation.
+      url: https://shibboleth.net
+      docs_url: https://shibboleth.atlassian.net/wiki/spaces/IDP4
+      stars: '0'
+      repository: https://git.shibboleth.net
+      license: Apache-2.0
+      category: identity
+      subcategory: Single Sign-On
+      tier: critical
+      maturity: production
+      logo: shibboleth.svg
+      tags:
+      - saml
+      - edugain
+      - dfn-aai
+      - sso
+      - federation
+      - authentication
+      - education
+      - research
+      organization: Shibboleth Consortium
+      language: Java
+    - name: Apereo CAS
+      description: Enterprise single sign-on platform supporting CAS, SAML2, OIDC,
+        and OAuth protocols. Provides central authentication for university portals,
+        LMS systems, and library services with multi-factor authentication.
+      url: https://www.apereo.org/projects/cas
+      docs_url: https://apereo.github.io/cas/
+      stars: 11k
+      repository: https://github.com/apereo/cas
+      license: Apache-2.0
+      category: identity
+      subcategory: Single Sign-On
+      tier: critical
+      maturity: production
+      logo: cas.svg
+      tags:
+      - sso
+      - saml
+      - oidc
+      - cas
+      - authentication
+      - mfa
+      - education
+      - research
+      organization: Apereo Foundation
+      language: Java
+    - name: Authelia
+      description: Open-source authentication and authorization server providing
+        single sign-on and two-factor authentication for self-hosted services. Protects
+        internal institutional tools with per-application access policies.
+      url: https://www.authelia.com
+      docs_url: https://www.authelia.com/configuration/
+      stars: 23k
+      repository: https://github.com/authelia/authelia
+      license: Apache-2.0
+      category: identity
+      subcategory: Single Sign-On
+      tier: standard
+      maturity: production
+      logo: authelia.svg
+      tags:
+      - sso
+      - 2fa
+      - authentication
+      - security
+      - reverse-proxy
+      - education
+      organization: Authelia
+      language: Go
+    - name: authentik
+      description: Flexible open-source identity provider with flows, policies,
+        and a polished admin interface. Provides SSO, MFA, and application access
+        management for self-hosted institutional services via SAML, OIDC, and LDAP.
+      url: https://goauthentik.io
+      docs_url: https://docs.goauthentik.io/
+      stars: 11k
+      repository: https://github.com/goauthentik/authentik
+      license: MIT
+      category: identity
+      subcategory: Single Sign-On
+      tier: high
+      maturity: production
+      logo: authentik.svg
+      tags:
+      - sso
+      - oidc
+      - saml
+      - mfa
+      - authentication
+      - identity
+      - education
+      - research
+      organization: authentik
+      language: Python, Go
   - name: User Management
     items:
     - name: Self-Service Password
@@ -520,6 +1082,30 @@ categories:
       - research
       organization: OpenLDAP Foundation
       language: C
+    - name: LDAP Account Manager
+      description: Web-based management interface for LDAP directories with user,
+        group, and host administration. Simplifies account management for IT staff
+        maintaining OpenLDAP or 389 Directory Server backends.
+      url: https://ldap-account-manager.org
+      docs_url: https://www.ldap-account-manager.org/lamcms/documentation
+      stars: 400
+      repository: https://github.com/LDAPAccountManager/lam
+      license: GPL-3.0
+      category: identity
+      subcategory: User Management
+      tier: standard
+      maturity: production
+      logo: lam.svg
+      tags:
+      - ldap
+      - user-management
+      - directory
+      - web-ui
+      - identity
+      - education
+      - research
+      organization: LDAP Account Manager
+      language: PHP
 - id: lms
   name: Learning Management
   description: LMS, online classes, and educational tools
@@ -576,6 +1162,54 @@ categories:
       - virtual-classroom
       - grading
       organization: Moodle HQ
+      language: PHP
+    - name: OpenOlat
+      description: Open-source LMS developed for Swiss universities with extensive
+        e-assessment and competence management. Supports blended learning, course
+        creation, virtual classrooms, and European education standards.
+      url: https://www.openolat.com
+      docs_url: https://docs.openolat.org/
+      stars: 600
+      repository: https://github.com/OpenOLAT/OpenOLAT
+      license: Apache-2.0
+      category: lms
+      subcategory: LMS Platforms
+      tier: high
+      maturity: production
+      logo: openolat.svg
+      tags:
+      - lms
+      - assessment
+      - blended-learning
+      - education
+      - curriculum
+      - research
+      organization: frentix GmbH
+      language: Java
+    - name: Stud.IP
+      description: Open-source LMS developed by and for German universities with
+        course management, file exchange, and event organization. Integrates with
+        university identity systems and supports plug-ins for video conferencing
+        and digital exams.
+      url: https://www.studip.de
+      docs_url: https://developers.studip.de
+      stars: 300
+      repository: https://github.com/Stud-IP/Stud.IP
+      license: GPL-2.0
+      category: lms
+      subcategory: LMS Platforms
+      tier: high
+      maturity: production
+      logo: studip.svg
+      tags:
+      - german
+      - lms
+      - university
+      - education
+      - curriculum
+      - virtual-classroom
+      - research
+      organization: Stud.IP e.V.
       language: PHP
   - name: Video Conferencing
     items:
@@ -650,6 +1284,81 @@ categories:
       - education
       organization: XWiki SAS
       language: Java
+  - name: Interactive Learning Content
+    items:
+    - name: H5P
+      description: Framework for creating and sharing interactive learning content
+        such as quizzes, interactive videos, and memory games. Integrates with Moodle,
+        ILIAS, and WordPress to enrich digital courses with engaging exercises.
+      url: https://h5p.org
+      docs_url: https://h5p.org/documentation
+      stars: 1.2k
+      repository: https://github.com/h5p/h5p-php-library
+      license: MIT
+      category: lms
+      subcategory: Interactive Learning Content
+      tier: standard
+      maturity: production
+      logo: h5p.svg
+      tags:
+      - interactive
+      - quizzes
+      - elearning
+      - content
+      - education
+      - lti
+      organization: H5P Group
+      language: PHP, JavaScript
+  - name: ePortfolio & Competencies
+    items:
+    - name: Mahara
+      description: Open-source ePortfolio and social networking platform for student
+        reflection and competency documentation. Enables evidence-based assessment,
+        group portfolios, and integration with Moodle via LTI.
+      url: https://mahara.org
+      docs_url: https://manual.mahara.org/
+      stars: 800
+      repository: https://github.com/MaharaProject/mahara
+      license: GPL-3.0
+      category: lms
+      subcategory: ePortfolio & Competencies
+      tier: standard
+      maturity: production
+      logo: mahara.svg
+      tags:
+      - eportfolio
+      - reflection
+      - assessment
+      - competencies
+      - education
+      - lti
+      organization: Mahara Community
+      language: PHP
+  - name: Educational Content
+    items:
+    - name: edu-sharing
+      description: Open-source repository network for sharing learning materials
+        across institutions. Enables collaborative management of educational content
+        with metadata, licensing, and integration into LMS and portals.
+      url: https://www.edu-sharing.com
+      docs_url: https://docs.edu-sharing.com
+      stars: 100
+      repository: https://github.com/edu-sharing/edu-sharing-angular-core-module
+      license: AGPL-3.0
+      category: lms
+      subcategory: Educational Content
+      tier: standard
+      maturity: production
+      logo: edu-sharing.svg
+      tags:
+      - content-repository
+      - learning-materials
+      - metadata
+      - education
+      - research
+      - sharing
+      organization: edu-sharing Network
+      language: Java, Angular
 - id: collaboration
   name: Content & Collaboration
   description: File storage, document editing, and collaboration tools
@@ -817,6 +1526,32 @@ categories:
       - group-work
       - research
       language: Python, JavaScript
+    - name: World-Office
+      description: Independent, sovereign open-source document editing suite built
+        from scratch in Rust and TypeScript. Provides collaborative document, spreadsheet,
+        presentation, PDF, and diagram editors via WOPI and WebDAV protocol servers
+        — no vendor lock-in, no telemetry, no licensing fees.
+      url: https://codeberg.org/World-Office/server
+      docs_url: https://github.com/World-Office/server
+      repository: https://github.com/World-Office/server
+      license: AGPL-3.0
+      category: collaboration
+      subcategory: Document Editing
+      tier: high
+      maturity: beta
+      logo: world-office.svg
+      tags:
+      - documents
+      - office
+      - spreadsheets
+      - presentations
+      - rust
+      - wopi
+      - webdav
+      - digital-sovereignty
+      - education
+      organization: World-Office Contributors
+      language: Rust, TypeScript
   - name: Diagramming & Whiteboards
     items:
     - name: Draw.io
@@ -910,6 +1645,52 @@ categories:
       - research
       organization: TYPO3 Association
       language: PHP
+    - name: MediaWiki
+      description: The wiki platform powering Wikipedia with extensions for education,
+        semantic data, and structured discussions. Enables institutional knowledge
+        bases, lecture glossaries, and collaborative documentation with LDAP integration.
+      url: https://www.mediawiki.org
+      docs_url: https://www.mediawiki.org/wiki/Documentation
+      stars: 4.6k
+      repository: https://github.com/wikimedia/mediawiki
+      license: GPL-2.0
+      category: collaboration
+      subcategory: Documentation & Content
+      tier: standard
+      maturity: graduated
+      logo: mediawiki.png
+      tags:
+      - wiki
+      - knowledge-base
+      - documentation
+      - collaboration
+      - education
+      - research
+      organization: Wikimedia Foundation
+      language: PHP
+    - name: DokuWiki
+      description: Simple-to-use, file-based wiki that needs no database with a
+        large plugin ecosystem. Enables lightweight documentation for courses,
+        labs, and institutional processes with access control and revision history.
+      url: https://www.dokuwiki.org
+      docs_url: https://www.dokuwiki.org/wiki
+      stars: 4.4k
+      repository: https://github.com/dokuwiki/dokuwiki
+      license: GPL-2.0
+      category: collaboration
+      subcategory: Documentation & Content
+      tier: standard
+      maturity: production
+      logo: dokuwiki.png
+      tags:
+      - wiki
+      - documentation
+      - knowledge-base
+      - collaboration
+      - education
+      - research
+      organization: DokuWiki Community
+      language: PHP
 - id: project
   name: Project Management
   description: Project, task, and work management tools
@@ -964,6 +1745,100 @@ categories:
       - research
       organization: Planka Community
       language: JavaScript
+    - name: Taiga
+      description: Open-source agile project management platform with Scrum and Kanban
+        boards. Supports sprint planning, backlog management, and issue tracking
+        for institutional software teams and research groups.
+      url: https://www.taiga.io
+      docs_url: https://docs.taiga.io/
+      stars: 11k
+      repository: https://github.com/kaleidos-ventures/taiga
+      license: AGPL-3.0
+      category: project
+      subcategory: Project Management
+      tier: standard
+      maturity: production
+      logo: taiga.svg
+      tags:
+      - agile
+      - scrum
+      - kanban
+      - project-management
+      - research
+      - group-work
+      organization: Kaleidos
+      language: Python, JavaScript
+    - name: Redmine
+      description: Flexible project management web application with issue tracking,
+        Gantt charts, and wiki. Widely used in research and university administration
+        with LDAP integration and a mature plugin ecosystem.
+      url: https://www.redmine.org
+      docs_url: https://www.redmine.org/projects/redmine/wiki
+      stars: 5.5k
+      repository: https://github.com/redmine/redmine
+      license: GPL-2.0
+      category: project
+      subcategory: Project Management
+      tier: high
+      maturity: production
+      logo: redmine.svg
+      tags:
+      - issue-tracking
+      - project-management
+      - gantt
+      - wiki
+      - research
+      - group-work
+      organization: Redmine Community
+      language: Ruby
+  - name: Task & Todo Management
+    items:
+    - name: Vikunja
+      description: Self-hosted to-do and task management application with projects,
+        labels, and team sharing. Provides lightweight personal and team task tracking
+        for students, staff, and project groups with CalDAV sync.
+      url: https://vikunja.io
+      docs_url: https://vikunja.io/docs/
+      stars: 9k
+      repository: https://github.com/go-vikunja/vikunja
+      license: AGPL-3.0
+      category: project
+      subcategory: Task & Todo Management
+      tier: standard
+      maturity: production
+      logo: vikunja.svg
+      tags:
+      - tasks
+      - todos
+      - kanban
+      - gtd
+      - collaboration
+      - education
+      organization: Vikunja
+      language: Go, Vue
+    - name: Kanboard
+      description: Minimalist Kanban board application with subtasks, time tracking,
+        and analytics. Provides a fast, self-hosted task board for labs, committees,
+        and student projects with LDAP authentication.
+      url: https://kanboard.org
+      docs_url: https://docs.kanboard.org
+      stars: 8k
+      repository: https://github.com/kanboard/kanboard
+      license: MIT
+      category: project
+      subcategory: Task & Todo Management
+      tier: standard
+      maturity: production
+      logo: kanboard.svg
+      tags:
+      - kanban
+      - tasks
+      - boards
+      - time-tracking
+      - collaboration
+      - education
+      organization: Kanboard
+      language: PHP
 - id: development
   name: Development & DevOps
   description: Version control, CI/CD, and developer tooling for institutional development
@@ -1021,160 +1896,32 @@ categories:
       - repository
       - education
       - research
-  - name: CI/CD
+    - name: GitLab CE
+      description: Complete DevOps platform with Git repositories, CI/CD pipelines,
+        and container registry in a single application. Widely used by universities
+        for coursework, research code, and internal projects with SSO integration.
+      url: https://about.gitlab.com
+      docs_url: https://docs.gitlab.com
+      stars: 24k
+      repository: https://github.com/gitlabhq/gitlabhq
+      license: MIT
+      category: development
+      subcategory: Version Control
+      tier: high
+      maturity: production
+      logo: gitlab.png
+      tags:
+      - version-control
+      - ci-cd
+      - code-review
+      - git
+      - devops
+      - education
+      - research
+      organization: GitLab Inc.
+      language: Ruby, Go
+  - name: CI/CD & Automation
     items:
-    - name: ttyd
-      description: Browser-based Linux terminal providing full command-line access
-        from any device.
-      url: https://ttyd.example.org
-      maturity: beta
-      tier: high
-      logo: ttyd.svg
-      tags:
-      - ttyd
-      - terminal
-      - ssh
-      - cli
-      - scientific-computing
-      license: MIT
-      category: development
-    - name: Slidev
-      description: Markdown-to-presentations tool for creating slide decks from simple
-        Markdown files.
-      url: https://slidev.example.org
-      maturity: beta
-      tier: high
-      logo: slidev.svg
-      tags:
-      - slidev
-      - presentations
-      - markdown
-      - slides
-      - scientific-computing
-      license: MIT
-      category: development
-    - name: RStudio Server
-      description: Professional R IDE with Shiny app support, workspace management,
-        and OpenCloud file sync.
-      url: https://rstudio-server.example.org
-      maturity: beta
-      tier: high
-      logo: rstudio.svg
-      tags:
-      - rstudio
-      - r
-      - shiny
-      - statistics
-      - data-science
-      - scientific-computing
-      license: AGPL-3.0
-      category: development
-    - name: Overleaf CE
-      description: Collaborative real-time LaTeX editor for scientific writing, theses,
-        and academic publishing.
-      url: https://overleaf-ce.example.org
-      maturity: beta
-      tier: high
-      logo: overleaf.svg
-      tags:
-      - overleaf
-      - latex
-      - writing
-      - academic
-      - scientific-computing
-      license: AGPL-3.0
-      category: development
-    - name: Open WebUI
-      description: ChatGPT-like web interface for interacting with local large language
-        models via Ollama.
-      url: https://open-webui.example.org
-      maturity: beta
-      tier: high
-      logo: open-webui.svg
-      tags:
-      - open-webui
-      - llm
-      - ai
-      - chatbot
-      - scientific-computing
-      license: MIT
-      category: development
-    - name: Ollama
-      description: Local LLM backend serving open-source models like llama3.2 and
-        nomic-embed-text.
-      url: https://ollama.example.org
-      maturity: beta
-      tier: high
-      logo: ollama.svg
-      tags:
-      - ollama
-      - llm
-      - ai
-      - machine-learning
-      - scientific-computing
-      license: MIT
-      category: development
-    - name: KasmVNC
-      description: Full Linux desktop environment in the browser with near-native
-        performance.
-      url: https://kasmvnc.example.org
-      maturity: beta
-      tier: high
-      logo: kasmvnc.svg
-      tags:
-      - kasmvnc
-      - desktop
-      - vnc
-      - remote-access
-      - scientific-computing
-      license: GPL-3.0
-      category: development
-    - name: JupyterHub
-      description: Multi-user Jupyter notebook server with kernels for Python, R,
-        Julia, SageMath, and Octave.
-      url: https://jupyterhub.example.org
-      maturity: beta
-      tier: high
-      logo: jupyterhub.svg
-      tags:
-      - jupyter
-      - notebooks
-      - python
-      - r
-      - julia
-      - scientific-computing
-      license: BSD-3-Clause
-      category: development
-    - name: Dask Gateway
-      description: Distributed parallel computing cluster for scaling data science
-        and scientific workloads.
-      url: https://dask-gateway.example.org
-      maturity: planned
-      tier: high
-      logo: dask.svg
-      tags:
-      - dask
-      - distributed-computing
-      - parallel
-      - big-data
-      - scientific-computing
-      license: BSD-3-Clause
-      category: development
-    - name: code-server
-      description: VS Code in the browser — a full-featured browser-based IDE for
-        development and education.
-      url: https://code-server.example.org
-      maturity: beta
-      tier: high
-      logo: code-server.svg
-      tags:
-      - code-server
-      - vscode
-      - ide
-      - development
-      - scientific-computing
-      license: MIT
-      category: development
     - name: Woodpecker CI
       description: Community-focused CI/CD pipeline platform for Git forges with Docker-based
         builds. Automates testing, building, and deployment of openDesk customizations
@@ -1187,9 +1934,10 @@ categories:
       organization: Woodpecker CI
       license: Apache-2.0
       category: development
-      subcategory: CI/CD
+      subcategory: CI/CD & Automation
       tier: standard
       maturity: production
+      logo: woodpecker.svg
       tags:
       - pipelines
       - automation
@@ -1199,6 +1947,347 @@ categories:
       - devops
       - education
       - research
+    - name: Jenkins
+      description: Extensible automation server for building, testing, and deploying
+        software with a massive plugin ecosystem. Provides flexible CI/CD pipelines
+        for institutional software projects and course assignments.
+      url: https://www.jenkins.io
+      docs_url: https://www.jenkins.io/doc/
+      stars: 23k
+      repository: https://github.com/jenkinsci/jenkins
+      license: MIT
+      category: development
+      subcategory: CI/CD & Automation
+      tier: high
+      maturity: graduated
+      logo: jenkins.png
+      tags:
+      - ci
+      - cd
+      - pipelines
+      - automation
+      - devops
+      - education
+      - research
+      organization: Jenkins Project
+      language: Java
+  - name: Scientific Computing
+    items:
+    - name: JupyterHub
+      description: Multi-user Jupyter notebook server with kernels for Python, R,
+        Julia, SageMath, and Octave. Provides shared computational notebooks for
+        data science courses, research groups, and lab practicals with per-user
+        resource limits.
+      url: https://jupyter.org/hub
+      docs_url: https://jupyterhub.readthedocs.io/
+      stars: 8k
+      repository: https://github.com/jupyterhub/jupyterhub
+      license: BSD-3-Clause
+      category: development
+      subcategory: Scientific Computing
+      tier: high
+      maturity: production
+      logo: jupyterhub.svg
+      tags:
+      - jupyter
+      - notebooks
+      - python
+      - r
+      - julia
+      - scientific-computing
+      - education
+      - research
+      organization: Project Jupyter
+      language: Python
+    - name: RStudio Server
+      description: Professional R IDE with Shiny app support, workspace management,
+        and OpenCloud file sync. Enables browser-based statistical analysis for
+        courses and research groups with R Markdown and reproducible research workflows.
+      url: https://posit.co/products/open-source/rstudio-server/
+      docs_url: https://docs.posit.co/ide/server-pro/
+      stars: 4.7k
+      repository: https://github.com/rstudio/rstudio
+      license: AGPL-3.0
+      category: development
+      subcategory: Scientific Computing
+      tier: high
+      maturity: production
+      logo: rstudio.svg
+      tags:
+      - rstudio
+      - r
+      - shiny
+      - statistics
+      - data-science
+      - scientific-computing
+      - research
+      organization: Posit Software
+      language: C++, R
+    - name: Overleaf CE
+      description: Collaborative real-time LaTeX editor for scientific writing, theses,
+        and academic publishing. Provides tracked changes, integrated preview, and
+        bibliography management for students and research groups.
+      url: https://github.com/overleaf/overleaf
+      docs_url: https://github.com/overleaf/overleaf/wiki
+      stars: 14k
+      repository: https://github.com/overleaf/overleaf
+      license: AGPL-3.0
+      category: development
+      subcategory: Scientific Computing
+      tier: high
+      maturity: production
+      logo: overleaf.svg
+      tags:
+      - overleaf
+      - latex
+      - writing
+      - academic
+      - scientific-computing
+      - research
+      - education
+      organization: Overleaf / Digital Science
+      language: JavaScript, CoffeeScript
+    - name: Dask Gateway
+      description: Distributed parallel computing cluster for scaling data science
+        and scientific workloads. Provides on-demand, authenticated access to Dask
+        clusters for Jupyter users with resource quotas.
+      url: https://gateway.dask.org
+      docs_url: https://gateway.dask.org/
+      stars: 1.9k
+      repository: https://github.com/dask/dask-gateway
+      license: BSD-3-Clause
+      category: development
+      subcategory: Scientific Computing
+      tier: high
+      maturity: production
+      logo: dask.svg
+      tags:
+      - dask
+      - distributed-computing
+      - parallel
+      - big-data
+      - scientific-computing
+      - research
+      organization: Dask Project
+      language: Python
+  - name: Developer Tools
+    items:
+    - name: code-server
+      description: VS Code in the browser — a full-featured browser-based IDE for
+        development and education. Provides consistent development environments
+        for programming courses without local setup on student devices.
+      url: https://coder.com/docs/code-server
+      docs_url: https://coder.com/docs/code-server
+      stars: 68k
+      repository: https://github.com/coder/code-server
+      license: MIT
+      category: development
+      subcategory: Developer Tools
+      tier: high
+      maturity: production
+      logo: code-server.svg
+      tags:
+      - code-server
+      - vscode
+      - ide
+      - development
+      - scientific-computing
+      - education
+      organization: Coder
+      language: TypeScript
+    - name: ttyd
+      description: Browser-based Linux terminal providing full command-line access
+        from any device. Enables lab workstations, teaching terminals, and server
+        administration without SSH client installation.
+      url: https://tsl0922.github.io/ttyd/
+      docs_url: https://github.com/tsl0922/ttyd
+      stars: 8.5k
+      repository: https://github.com/tsl0922/ttyd
+      license: MIT
+      category: development
+      subcategory: Developer Tools
+      tier: low
+      maturity: production
+      logo: ttyd.svg
+      tags:
+      - ttyd
+      - terminal
+      - ssh
+      - cli
+      - scientific-computing
+      - education
+      organization: tsl0922 (community)
+      language: C
+    - name: KasmVNC
+      description: Full Linux desktop environment in the browser with near-native
+        performance. Provides remote access to graphical applications and complete
+        desktops for labs, libraries, and research workstations.
+      url: https://www.kasmweb.com/kasmvnc
+      docs_url: https://github.com/kasmtech/KasmVNC
+      stars: 2.5k
+      repository: https://github.com/kasmtech/KasmVNC
+      license: GPL-3.0
+      category: development
+      subcategory: Developer Tools
+      tier: standard
+      maturity: production
+      logo: kasmvnc.svg
+      tags:
+      - kasmvnc
+      - desktop
+      - vnc
+      - remote-access
+      - scientific-computing
+      - education
+      organization: Kasm Technologies
+      language: C, C++
+    - name: Slidev
+      description: Markdown-to-presentations tool for creating slide decks from simple
+        Markdown files. Enables lecture slides and conference talks with code highlighting,
+        diagrams, and interactive components.
+      url: https://sli.dev
+      docs_url: https://sli.dev/guide/
+      stars: 34k
+      repository: https://github.com/slidevjs/slidev
+      license: MIT
+      category: development
+      subcategory: Developer Tools
+      tier: low
+      maturity: production
+      logo: slidev.svg
+      tags:
+      - slidev
+      - presentations
+      - markdown
+      - slides
+      - scientific-computing
+      - education
+      organization: Slidev (Anthony Fu)
+      language: TypeScript, Vue
+  - name: Configuration & Automation
+    items:
+    - name: Ansible
+      description: Agentless automation platform for configuration management,
+        application deployment, and orchestration. Enables reproducible server
+        configuration across openDesk environments with declarative playbooks.
+      url: https://www.ansible.com
+      docs_url: https://docs.ansible.com
+      stars: 62k
+      repository: https://github.com/ansible/ansible
+      license: GPL-3.0
+      category: development
+      subcategory: Configuration & Automation
+      tier: high
+      maturity: graduated
+      logo: ansible.svg
+      tags:
+      - configuration-management
+      - automation
+      - infrastructure-as-code
+      - devops
+      - education
+      - research
+      organization: Red Hat (Ansible)
+      language: Python
+    - name: OpenTofu
+      description: Open-source, community-driven infrastructure as code tool forked
+        from Terraform. Declaratively provisions cloud and on-premise infrastructure
+        with a consistent workflow and MPL-2.0 license.
+      url: https://opentofu.org
+      docs_url: https://opentofu.org/docs/
+      stars: 22k
+      repository: https://github.com/opentofu/opentofu
+      license: MPL-2.0
+      category: development
+      subcategory: Configuration & Automation
+      tier: standard
+      maturity: production
+      logo: opentofu.svg
+      tags:
+      - infrastructure-as-code
+      - provisioning
+      - terraform
+      - automation
+      - research
+      - education
+      organization: OpenTofu (Linux Foundation)
+      language: Go
+  - name: Code Quality
+    items:
+    - name: SonarQube
+      description: Continuous code quality and security analysis for 30+ programming
+        languages. Detects bugs, code smells, and vulnerabilities in institutional
+        projects with quality gates integrated into CI pipelines.
+      url: https://www.sonarqube.org
+      docs_url: https://docs.sonarqube.org
+      stars: 9k
+      repository: https://github.com/SonarSource/sonarqube
+      license: LGPL-3.0
+      category: development
+      subcategory: Code Quality
+      tier: standard
+      maturity: production
+      logo: sonarqube.svg
+      tags:
+      - code-quality
+      - static-analysis
+      - security
+      - ci
+      - devops
+      - research
+      - education
+      organization: SonarSource
+      language: Java
+  - name: AI & Machine Learning
+    items:
+    - name: Ollama
+      description: Local LLM backend serving open-source models like llama3.2 and
+        nomic-embed-text. Provides private, on-premise large language model inference
+        for research and teaching without external data processing.
+      url: https://ollama.com
+      docs_url: https://github.com/ollama/ollama/tree/main/docs
+      stars: 120k
+      repository: https://github.com/ollama/ollama
+      license: MIT
+      category: development
+      subcategory: AI & Machine Learning
+      tier: standard
+      maturity: production
+      logo: ollama.svg
+      tags:
+      - ollama
+      - llm
+      - ai
+      - machine-learning
+      - scientific-computing
+      - research
+      - gdpr
+      organization: Ollama
+      language: Go
+    - name: Open WebUI
+      description: ChatGPT-like web interface for interacting with local large language
+        models via Ollama. Provides chat, retrieval-augmented generation, and role-based
+        access for AI teaching and research assistants.
+      url: https://openwebui.com
+      docs_url: https://docs.openwebui.com/
+      stars: 80k
+      repository: https://github.com/open-webui/open-webui
+      license: BSD-3-Clause
+      category: development
+      subcategory: AI & Machine Learning
+      tier: standard
+      maturity: production
+      logo: open-webui.png
+      tags:
+      - open-webui
+      - llm
+      - ai
+      - chatbot
+      - scientific-computing
+      - research
+      - gdpr
+      organization: Open WebUI
+      language: Svelte, Python
 - id: communication
   name: Communication
   description: Email, messaging, and support tools
@@ -1251,6 +2340,30 @@ categories:
       - research
       organization: Inverse
       language: Objective-C, JavaScript
+    - name: Radicale
+      description: Lightweight CalDAV and CardDAV server for calendars, contacts,
+        and tasks. Provides standards-based sync for students and staff with file-based
+        storage and authentication support.
+      url: https://radicale.org
+      docs_url: https://radicale.org/v3.html
+      stars: 3k
+      repository: https://github.com/Kozea/Radicale
+      license: GPL-3.0
+      category: communication
+      subcategory: Email & Groupware
+      tier: standard
+      maturity: production
+      logo: radicale.svg
+      tags:
+      - caldav
+      - carddav
+      - calendar
+      - contacts
+      - sync
+      - education
+      - research
+      organization: Radicale Community
+      language: Python
   - name: Email Infrastructure
     items:
     - name: Dovecot
@@ -1297,6 +2410,29 @@ categories:
       - gdpr
       organization: Wietse Venema
       language: C
+    - name: Roundcube
+      description: Browser-based IMAP email client with a modern interface, address
+        book, and full-text search. Provides a responsive webmail frontend for
+        Dovecot and Postfix mail servers used by institutions.
+      url: https://roundcube.net
+      docs_url: https://github.com/roundcube/roundcubemail/wiki
+      stars: 6k
+      repository: https://github.com/roundcube/roundcubemail
+      license: GPL-3.0
+      category: communication
+      subcategory: Email Infrastructure
+      tier: high
+      maturity: production
+      logo: roundcube.svg
+      tags:
+      - email
+      - webmail
+      - imap
+      - client
+      - education
+      - gdpr
+      organization: Roundcube
+      language: PHP
   - name: Messaging
     items:
     - name: Element
@@ -1323,6 +2459,76 @@ categories:
       - research
       organization: Element / Matrix.org
       language: TypeScript
+    - name: Synapse
+      description: Reference Matrix homeserver powering federated, end-to-end encrypted
+        communication. Provides the server-side foundation for Element clients with
+        room federation, moderation tools, and LDAP integration.
+      url: https://matrix.org/docs/projects/server/synapse
+      docs_url: https://matrix-org.github.io/synapse/latest/
+      stars: 14k
+      repository: https://github.com/element-hq/synapse
+      license: Apache-2.0
+      category: communication
+      subcategory: Messaging
+      tier: high
+      maturity: production
+      logo: synapse.svg
+      tags:
+      - matrix
+      - e2ee
+      - messaging
+      - federation
+      - chat
+      - collaboration
+      - research
+      organization: Element / Matrix.org
+      language: Python
+    - name: Mattermost
+      description: Self-hosted team collaboration and messaging platform with channels,
+        boards, and playbooks. Provides an open alternative to Slack for institutional
+        teams with SSO, compliance controls, and high availability.
+      url: https://mattermost.com
+      docs_url: https://docs.mattermost.com/
+      stars: 30k
+      repository: https://github.com/mattermost/mattermost
+      license: AGPL-3.0
+      category: communication
+      subcategory: Messaging
+      tier: high
+      maturity: production
+      logo: mattermost.svg
+      tags:
+      - messaging
+      - chat
+      - collaboration
+      - team-work
+      - gdpr
+      - research
+      organization: Mattermost Inc.
+      language: Go, React
+    - name: Rocket.Chat
+      description: Open-source team communication platform with channels, direct
+        messages, and video calls. Provides a self-hosted Slack alternative for
+        institutions with SSO, LDAP sync, and end-to-end encryption options.
+      url: https://www.rocket.chat
+      docs_url: https://docs.rocket.chat
+      stars: 41k
+      repository: https://github.com/RocketChat/Rocket.Chat
+      license: MIT
+      category: communication
+      subcategory: Messaging
+      tier: high
+      maturity: production
+      logo: rocket-chat.svg
+      tags:
+      - messaging
+      - chat
+      - collaboration
+      - team-work
+      - video-calls
+      - research
+      organization: Rocket.Chat
+      language: JavaScript, TypeScript
   - name: Support & Helpdesk
     items:
     - name: Zammad
@@ -1370,6 +2576,61 @@ categories:
       - research
       organization: LimeSurvey GmbH
       language: PHP
+- id: research
+  name: Research & Publishing
+  description: Publication repositories, open journal systems, and scholarly infrastructure
+  color: '#4F46E5'
+  icon: 📄
+  subcategories:
+  - name: Publishing & Repositories
+    items:
+    - name: Open Journal Systems (OJS)
+      description: Open-source journal management and publishing platform for scholarly
+        journals. Provides the complete editorial workflow — submission, peer review,
+        editing, and publication — used by thousands of academic journals worldwide.
+      url: https://pkp.sfu.ca/ojs
+      docs_url: https://docs.pkp.sfu.ca
+      stars: 300
+      repository: https://github.com/pkp/ojs
+      license: GPL-3.0
+      category: research
+      subcategory: Publishing & Repositories
+      tier: high
+      maturity: production
+      logo: ojs.svg
+      tags:
+      - publishing
+      - journals
+      - open-access
+      - peer-review
+      - research
+      - education
+      organization: Public Knowledge Project
+      language: PHP
+    - name: DSpace
+      description: Open-source repository platform for preserving and sharing research
+        output, theses, and digital collections. Provides institutional repositories
+        with persistent identifiers, workflows, and metadata standards.
+      url: https://dspace.org
+      docs_url: https://wiki.lyrasis.org/display/DSDOC
+      stars: 1k
+      repository: https://github.com/DSpace/DSpace
+      license: BSD-3-Clause
+      category: research
+      subcategory: Publishing & Repositories
+      tier: high
+      maturity: production
+      logo: dspace.svg
+      tags:
+      - repository
+      - open-access
+      - theses
+      - research-data
+      - preservation
+      - research
+      - education
+      organization: DSpace (LYRASIS)
+      language: Java
 - id: accessibility
   name: Accessibility & Inclusion
   description: Accessibility testing and inclusive technology tools for equitable
@@ -1401,3 +2662,49 @@ categories:
       - a11y
       - accessibility
       - inclusion
+    - name: axe-core
+      description: Accessibility testing engine powering the Deque axe browser extensions
+        and CI pipelines. Runs WCAG 2.1 AA checks directly in the browser or via
+        automation frameworks for continuous accessibility testing.
+      url: https://www.deque.com/axe/
+      docs_url: https://www.deque.com/axe/core-documentation/api-documentation/
+      stars: 6k
+      repository: https://github.com/dequelabs/axe-core
+      license: MPL-2.0
+      category: accessibility
+      subcategory: Accessibility Testing
+      tier: standard
+      maturity: production
+      logo: axe-core.svg
+      tags:
+      - testing
+      - wcag
+      - a11y
+      - compliance
+      - automation
+      - inclusion
+      organization: Deque Systems
+      language: JavaScript
+    - name: Lighthouse
+      description: Automated auditing tool for web performance, accessibility, and
+        SEO. Generates actionable reports for institutional websites and learning
+        platforms with CI integration and budget-based regression checks.
+      url: https://developers.google.com/web/tools/lighthouse
+      docs_url: https://developer.chrome.com/docs/lighthouse/
+      stars: 28k
+      repository: https://github.com/GoogleChrome/lighthouse
+      license: Apache-2.0
+      category: accessibility
+      subcategory: Accessibility Testing
+      tier: standard
+      maturity: production
+      logo: lighthouse.svg
+      tags:
+      - performance
+      - testing
+      - a11y
+      - audits
+      - seo
+      - inclusion
+      organization: Google (Open Source)
+      language: JavaScript

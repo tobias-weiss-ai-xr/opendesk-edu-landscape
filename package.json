@@ -1,7 +1,7 @@
 {
   "name": "openDesk Edu Landscape",
   "version": "1.0.0",
-  "description": "Interactive landscape of the openDesk Edu ecosystem - 25 integrated open-source services for educational institutions",
+  "description": "Interactive landscape of the openDesk Edu ecosystem - 109 integrated open-source services for educational institutions",
   "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 8000",
