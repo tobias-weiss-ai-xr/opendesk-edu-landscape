@@ -1,101 +1,83 @@
 # Deployment Guide - openDesk Edu Landscape
 
+# Deployment Guide - openDesk Edu Landscape
+
 ## Current Status
 
-The `landscape.opendesk-edu.org` project has been created locally with all files, but the remote repositories don't exist yet. This guide explains how to deploy it.
+✅ **Live**: <https://landscape.opendesk-edu.org> (HTTP 200, 109 services)
 
-## What's Been Created
+The site is served by the **`landscape-opendesk-edu`** Docker container on the
+production host (178.254.2.90 / v22290.1blu.de), built from the git checkout
+at `/opt/landscape` (docker-compose project) and routed by a **Traefik
+docker-label** router (priority 100) with TLS via `mytlschallenge`.
 
-✅ **8 files** committed to local git repository:
-- `index.html` (Main page)
-- `styles.css` (Styling)
-- `script.js` (Interactive JavaScript with embedded data)
-- `data/services.yaml` (YAML data source)
-- `README.md` (Comprehensive documentation)
-- `CNAME` (Custom domain: landscape.opendesk-edu.org)
-- `package.json` (Project metadata)
-- `.gitignore` (Standard ignore patterns)
+> ⚠️ The old `hugo-chemie-lernen-org` based deployment (bind-mounted
+> `/opt/git/hugo-chemie-lernen-org/myhugoapp/static/landscape`) is **not**
+> the live path — its Traefik file-provider router loses to the docker-label
+> router. Do not use it.
 
-**Total**: 1,640 lines of code
+## Deploying
 
-## Next Steps to Deploy
+Use `scripts/deploy-landscape.sh` (rewritten for the real infra). It:
 
-### Option 1: GitHub Pages (Recommended)
-
-```bash
-# 1. Create the GitHub repository
-# Go to: https://github.com/organizations/opendesk-edu/repositories/new
-# Repository name: landscape.opendesk-edu.org
-# Make it public
-# DO NOT initialize with README, .gitignore, or license
-
-# 2. Push to GitHub
-cd /home/weissto_local/git/opendesk_git/landscape.opendesk-edu.org
-git remote add origin https://github.com/opendesk-edu/landscape.opendesk-edu.org.git
-git push -u origin master
-
-# 3. Enable GitHub Pages
-# Go to: https://github.com/opendesk-edu/landscape.opendesk-edu.org/settings/pages
-# Source: Deploy from a branch
-# Branch: master
-# Folder: / (root)
-# Click Save
-
-# 4. Configure Custom Domain
-# In the same Settings > Pages section
-# Custom domain: landscape.opendesk-edu.org
-# Enforce HTTPS: ✅ (recommended)
-
-# 5. Configure DNS
-# Add a CNAME record:
-# landscape.opendesk-edu.org → opendesk-edu.github.io
-```
-
-### Option 2: Codeberg Pages
+1. Runs a **pre-deploy gate**: validates `data/services.yaml` (YAML → JS),
+   optionally the full unit suite (`RUN_TESTS=1`)
+2. `git pull --ff-only origin main` into `/opt/landscape` (refuses to
+   fast-forward over local changes)
+3. Preserves the current image as `landscape-opendesk-edu:previous` for
+   instant rollback
+4. `docker compose build && docker compose up -d`
+5. Verifies the live site: HTTP 200, service count ≥ 109, World-Office
+   present, no ONLYOFFICE references, spot-checked logos
 
 ```bash
-# 1. Create the Codeberg repository
-# Go to: https://codeberg.org/opendesk-edu/landscape.opendesk-edu.org
-# (You may need to enable "Push to create" in organization settings)
+# on the production host
+bash /opt/landscape/scripts/deploy-landscape.sh
 
-# 2. Push to Codeberg
-cd /home/weissto_local/git/opendesk_git/landscape.opendesk-edu.org
-git remote add codeberg git@codeberg.org:opendesk-edu/landscape.opendesk-edu.org.git
-git push -u codeberg master
+# from a dev machine (copies & runs the script on the host)
+DEPLOY_HOST=root@178.254.2.90 bash scripts/deploy-landscape.sh
 
-# 3. Enable Codeberg Pages
-# Go to: https://codeberg.org/opendesk-edu/landscape.opendesk-edu.org/settings/pages
-# Enable Pages on the main branch
+# knobs
+DRY_RUN=1      # plan only, change nothing
+SKIP_PULL=1    # deploy the current checkout without pulling
+RUN_TESTS=1    # run the vitest unit suite before deploying
 ```
 
-### Option 3: Any Static Hosting
+### Manual deploy
 
-The site is 100% static. You can deploy it to:
-- **Netlify**: Drag and drop the folder
-- **Vercel**: `vercel --prod`
-- **Cloudflare Pages**: Connect git repository
-- **AWS S3 + CloudFront**: Upload files to S3 bucket
-- **GitLab Pages**: Push to GitLab repository
+```bash
+ssh root@178.254.2.90
+cd /opt/landscape
+git config --global --add safe.directory /opt/landscape   # if 'dubious ownership'
+git pull --ff-only origin main
+docker compose build && docker compose up -d
+```
+
+### Rollback
+
+```bash
+cd /opt/landscape
+docker tag landscape-opendesk-edu:previous landscape-opendesk-edu:latest
+docker compose up -d
+```
+
+## Health Check
+
+```bash
+bash /opt/landscape/scripts/health-check.sh        # on the host
+bash scripts/health-check.sh                        # from a dev machine
+```
 
 ## Testing Locally
 
 Before deploying, test the site locally:
 
 ```bash
-cd /home/weissto_local/git/opendesk_git/landscape.opendesk-edu.org
-
-# Option 1: Python HTTP server
-python3 -m http.server 8000
-
-# Option 2: Node.js
-npx http-server -p 8000
-
-# Option 3: PHP
-php -S localhost:8000
+npm test                    # unit + property + E2E (full suite)
+python3 -m http.server 8000 # or: npx http-server -p 8000
 
 # Then open http://localhost:8000 in your browser
 ```
-
 ## Features Implemented
 
 ✅ **Interactive Visualization**
@@ -181,8 +163,8 @@ Add a new category object to the `categories` array in `script.js`:
 - **Repository Name**: `landscape.opendesk-edu.org`
 - **Domain**: `landscape.opendesk-edu.org`
 - **License**: Apache-2.0
-- **Status**: Local development complete, ready for deployment
-- **Last Updated**: 2026-06-27
+- **Status**: Live at https://landscape.opendesk-edu.org
+- **Last Updated**: 2026-08-12
 
 ## Support
 
