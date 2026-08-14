@@ -1697,6 +1697,31 @@ window.__LANDSCAPE_DATA = {
               ],
               "organization": "World-Office Contributors",
               "language": "Rust, TypeScript"
+            },
+            {
+              "name": "HermesOffice",
+              "description": "AI-native office suite (Docs, Sheets, Slides, PDF) built on open standards (.docx/.xlsx/.pptx) with byte-preserving round-trip. Local-first by default — the Hermes Agent runs on-device as the native brain, no cloud, no account, no lock-in. Desktop suite (Electron) for macOS and Windows.",
+              "url": "https://github.com/criptogus/HermesOffice",
+              "docs_url": "https://github.com/criptogus/HermesOffice",
+              "repository": "https://github.com/criptogus/HermesOffice",
+              "license": "Apache-2.0",
+              "category": "collaboration",
+              "subcategory": "Document Editing",
+              "tier": "standard",
+              "maturity": "beta",
+              "tags": [
+                "documents",
+                "office",
+                "spreadsheets",
+                "presentations",
+                "pdf",
+                "ai",
+                "agent-native",
+                "local-first",
+                "digital-sovereignty"
+              ],
+              "organization": "HermesOffice Contributors (criptogus)",
+              "language": "TypeScript, Rust"
             }
           ]
         },
@@ -2969,12 +2994,12 @@ window.__LANDSCAPE_DATA = {
     }
   ],
   "metadata": {
-    "total_services": 109,
+    "total_services": 110,
     "total_categories": 12,
     "license_breakdown": [
       {
         "license": "Apache-2.0",
-        "count": 28
+        "count": 29
       },
       {
         "license": "AGPL-3.0",
@@ -3040,7 +3065,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "tier": "standard",
-        "count": 43
+        "count": 44
       },
       {
         "tier": "low",
@@ -3058,7 +3083,7 @@ window.__LANDSCAPE_DATA = {
       },
       {
         "level": "beta",
-        "count": 1
+        "count": 2
       }
     ]
   }

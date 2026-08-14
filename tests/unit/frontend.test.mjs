@@ -180,7 +180,7 @@ describe('renderLandscape + categories', () => {
   it('renders every category with its subcategories and item cards', () => {
     app.renderLandscape();
     const cards = document.querySelectorAll('.item-card').length;
-    expect(cards).toBe(109);
+    expect(cards).toBe(110);
     expect(document.querySelectorAll('.category').length).toBe(12);
     expect(document.getElementById('cat-research')).not.toBeNull();
     expect(document.getElementById('cat-research').querySelectorAll('.item-card').length).toBe(2);
@@ -188,7 +188,7 @@ describe('renderLandscape + categories', () => {
 
   it('renders the count badge in category headers', () => {
     const badges = [...document.querySelectorAll('.count-badge')].map(b => parseInt(b.textContent, 10));
-    expect(badges.reduce((a, b) => a + b, 0)).toBe(109);
+    expect(badges.reduce((a, b) => a + b, 0)).toBe(110);
   });
 });
 
@@ -261,7 +261,7 @@ describe('renderStats counters', () => {
   it('animates the service counter to the real total', async () => {
     // force synchronous finish by waiting for the animation
     await new Promise(r => setTimeout(r, 900));
-    expect(document.getElementById('stat-count-services').textContent).toBe('109');
-    expect(document.getElementById('stat-services').textContent).toBe('109');
+    expect(document.getElementById('stat-count-services').textContent).toBe('110');
+    expect(document.getElementById('stat-services').textContent).toBe('110');
   });
 });

@@ -7,7 +7,7 @@
 const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 
-const TOTAL_SERVICES = 109;
+const TOTAL_SERVICES = 110;
 const TOTAL_CATEGORIES = 12;
 
 test.beforeEach(async ({ page }) => {
@@ -56,7 +56,7 @@ test.describe('search & filters', () => {
     await page.fill('#search', 'sonarqube');
     await expect(page.locator('.item-card')).toHaveCount(1);
     await expect(page.locator('.item-card mark')).toHaveCount(1);
-    await expect(page.locator('#search-results')).toContainText('1 of 109 services shown');
+    await expect(page.locator('#search-results')).toContainText('1 of 110 services shown');
     // search chip + clear-all chip
     await expect(page.locator('#active-filters .filter-chip')).toHaveCount(2);
     await expect(page.locator('#active-filters')).toContainText('sonarqube');
@@ -73,14 +73,15 @@ test.describe('search & filters', () => {
 
   test('tier filter reduces the grid to exactly the critical set', async ({ page }) => {
     await page.click('.filter-btn[data-filter-type="tier"][data-filter="critical"]');
-    await expect(page.locator('#search-results')).toContainText('17 of 109 services shown');
+    await expect(page.locator('#search-results')).toContainText('17 of 110 services shown');
     await expect(page.locator('.item-card')).toHaveCount(17);
   });
 
-  test('beta maturity filter returns exactly World-Office', async ({ page }) => {
+  test('beta maturity filter returns World-Office and HermesOffice', async ({ page }) => {
     await page.click('.filter-btn[data-filter-type="maturity"][data-filter="beta"]');
-    await expect(page.locator('.item-card')).toHaveCount(1);
-    await expect(page.locator('.item-name')).toHaveText('World-Office');
+    await expect(page.locator('.item-card')).toHaveCount(2);
+    await expect(page.locator('.item-name').first()).toHaveText('World-Office');
+    await expect(page.locator('.item-name').nth(1)).toHaveText('HermesOffice');
   });
 
   test('no trace of the discontinued ONLYOFFICE product', async ({ page }) => {

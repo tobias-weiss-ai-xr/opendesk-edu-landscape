@@ -25,14 +25,14 @@ const { data, warnings } = buildFromYaml(yamlText);
 
 const allItems = () => data.categories.flatMap(c => c.subcategories.flatMap(s => s.items));
 
-describe('real landscape dataset (109 services)', () => {
+describe('real landscape dataset (110 services)', () => {
   it('validates without any errors or warnings', () => {
     expect(warnings).toEqual([]);
     expect(data.categories.length).toBeGreaterThanOrEqual(12);
   });
 
   it('has the expected service and category counts', () => {
-    expect(data.metadata.total_services).toBeGreaterThanOrEqual(109);
+    expect(data.metadata.total_services).toBeGreaterThanOrEqual(110);
     expect(data.metadata.total_categories).toBe(12);
   });
 
@@ -131,7 +131,7 @@ describe('golden-file contract (data/services.js)', () => {
     expect(fresh).toBe(committed);
   });
 
-  it('committed data/services.js loads and exposes 109 services', () => {
+  it('committed data/services.js loads and exposes 110 services', () => {
     const code = fs.readFileSync(JS_PATH, 'utf8');
     const sandbox = { window: {} };
     vm.runInNewContext(code, sandbox);
